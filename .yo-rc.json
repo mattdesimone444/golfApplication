@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "golfApplication",
+    "packageName": "com.furious.golf",
+    "packageFolder": "com/furious/golf",
+    "serverPort": 8887,
+    "serviceDiscoveryType": "eureka",
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.2.0",
+    "jwtSecretKey": "NGE3YjE4MjEzM2NlNTc0YTUyNzU0NmNlZDQ1ZDc5NTM3YjJjZTIxOTVmMmZkZWFkMzkxNGI0OTk2YmQwMjI4ZjgzNmNlMWFhNzlkOGU4OTE2YzRkZWJmODk5NTNiMmVmOTBkY2EyNTJkZTA5YmZhNmRhY2RlNWVjZGYxZjJhY2Q=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "mattdesimone444",
+  "repository-name": "golfApplication"
+}
