@@ -1,0 +1,112 @@
+<div>
+    <h2 id="page-heading">
+        <span>SG Arround The Greens</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-sg-arround-the-green" [routerLink]="['/sg-arround-the-green/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down" >
+            Create a new SG Arround The Green
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="sGArroundTheGreens?.length === 0">
+        <span>No sGArroundTheGreens found</span>
+    </div>
+    <div class="table-responsive" *ngIf="sGArroundTheGreens?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Player Id</span></th>
+            <th><span>Tournament Id</span></th>
+            <th><span>Course Id</span></th>
+            <th><span>Hole 1</span></th>
+            <th><span>Hole 2</span></th>
+            <th><span>Hole 3</span></th>
+            <th><span>Hole 4</span></th>
+            <th><span>Hole 5</span></th>
+            <th><span>Hole 6</span></th>
+            <th><span>Hole 7</span></th>
+            <th><span>Hole 8</span></th>
+            <th><span>Hole 9</span></th>
+            <th><span>Hole 10</span></th>
+            <th><span>Hole 11</span></th>
+            <th><span>Hole 12</span></th>
+            <th><span>Hole 13</span></th>
+            <th><span>Hole 14</span></th>
+            <th><span>Hole 15</span></th>
+            <th><span>Hole 16</span></th>
+            <th><span>Hole 17</span></th>
+            <th><span>Hole 18</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let sGArroundTheGreen of sGArroundTheGreens ;trackBy: trackId">
+                <td><a [routerLink]="['/sg-arround-the-green', sGArroundTheGreen.id, 'view' ]">{{sGArroundTheGreen.id}}</a></td>
+                <td>{{sGArroundTheGreen.playerId}}</td>
+                <td>{{sGArroundTheGreen.tournamentId}}</td>
+                <td>{{sGArroundTheGreen.courseId}}</td>
+                <td>{{sGArroundTheGreen.hole1}}</td>
+                <td>{{sGArroundTheGreen.hole2}}</td>
+                <td>{{sGArroundTheGreen.hole3}}</td>
+                <td>{{sGArroundTheGreen.hole4}}</td>
+                <td>{{sGArroundTheGreen.hole5}}</td>
+                <td>{{sGArroundTheGreen.hole6}}</td>
+                <td>{{sGArroundTheGreen.hole7}}</td>
+                <td>{{sGArroundTheGreen.hole8}}</td>
+                <td>{{sGArroundTheGreen.hole9}}</td>
+                <td>{{sGArroundTheGreen.hole10}}</td>
+                <td>{{sGArroundTheGreen.hole11}}</td>
+                <td>{{sGArroundTheGreen.hole12}}</td>
+                <td>{{sGArroundTheGreen.hole13}}</td>
+                <td>{{sGArroundTheGreen.hole14}}</td>
+                <td>{{sGArroundTheGreen.hole15}}</td>
+                <td>{{sGArroundTheGreen.hole16}}</td>
+                <td>{{sGArroundTheGreen.hole17}}</td>
+                <td>{{sGArroundTheGreen.hole18}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/sg-arround-the-green', sGArroundTheGreen.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sg-arround-the-green', sGArroundTheGreen.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sg-arround-the-green', { outlets: { popup: sGArroundTheGreen.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

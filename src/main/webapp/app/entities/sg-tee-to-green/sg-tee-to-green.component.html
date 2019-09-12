@@ -1,0 +1,112 @@
+<div>
+    <h2 id="page-heading">
+        <span>SG Tee To Greens</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-sg-tee-to-green" [routerLink]="['/sg-tee-to-green/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down" >
+            Create a new SG Tee To Green
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="sGTeeToGreens?.length === 0">
+        <span>No sGTeeToGreens found</span>
+    </div>
+    <div class="table-responsive" *ngIf="sGTeeToGreens?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Player Id</span></th>
+            <th><span>Tournament Id</span></th>
+            <th><span>Course Id</span></th>
+            <th><span>Hole 1</span></th>
+            <th><span>Hole 2</span></th>
+            <th><span>Hole 3</span></th>
+            <th><span>Hole 4</span></th>
+            <th><span>Hole 5</span></th>
+            <th><span>Hole 6</span></th>
+            <th><span>Hole 7</span></th>
+            <th><span>Hole 8</span></th>
+            <th><span>Hole 9</span></th>
+            <th><span>Hole 10</span></th>
+            <th><span>Hole 11</span></th>
+            <th><span>Hole 12</span></th>
+            <th><span>Hole 13</span></th>
+            <th><span>Hole 14</span></th>
+            <th><span>Hole 15</span></th>
+            <th><span>Hole 16</span></th>
+            <th><span>Hole 17</span></th>
+            <th><span>Hole 18</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let sGTeeToGreen of sGTeeToGreens ;trackBy: trackId">
+                <td><a [routerLink]="['/sg-tee-to-green', sGTeeToGreen.id, 'view' ]">{{sGTeeToGreen.id}}</a></td>
+                <td>{{sGTeeToGreen.playerId}}</td>
+                <td>{{sGTeeToGreen.tournamentId}}</td>
+                <td>{{sGTeeToGreen.courseId}}</td>
+                <td>{{sGTeeToGreen.hole1}}</td>
+                <td>{{sGTeeToGreen.hole2}}</td>
+                <td>{{sGTeeToGreen.hole3}}</td>
+                <td>{{sGTeeToGreen.hole4}}</td>
+                <td>{{sGTeeToGreen.hole5}}</td>
+                <td>{{sGTeeToGreen.hole6}}</td>
+                <td>{{sGTeeToGreen.hole7}}</td>
+                <td>{{sGTeeToGreen.hole8}}</td>
+                <td>{{sGTeeToGreen.hole9}}</td>
+                <td>{{sGTeeToGreen.hole10}}</td>
+                <td>{{sGTeeToGreen.hole11}}</td>
+                <td>{{sGTeeToGreen.hole12}}</td>
+                <td>{{sGTeeToGreen.hole13}}</td>
+                <td>{{sGTeeToGreen.hole14}}</td>
+                <td>{{sGTeeToGreen.hole15}}</td>
+                <td>{{sGTeeToGreen.hole16}}</td>
+                <td>{{sGTeeToGreen.hole17}}</td>
+                <td>{{sGTeeToGreen.hole18}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/sg-tee-to-green', sGTeeToGreen.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sg-tee-to-green', sGTeeToGreen.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sg-tee-to-green', { outlets: { popup: sGTeeToGreen.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

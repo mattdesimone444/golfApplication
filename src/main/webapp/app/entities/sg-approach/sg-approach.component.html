@@ -1,0 +1,112 @@
+<div>
+    <h2 id="page-heading">
+        <span>SG Approaches</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-sg-approach" [routerLink]="['/sg-approach/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down" >
+            Create a new SG Approach
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="sGApproaches?.length === 0">
+        <span>No sGApproaches found</span>
+    </div>
+    <div class="table-responsive" *ngIf="sGApproaches?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Player Id</span></th>
+            <th><span>Tournament Id</span></th>
+            <th><span>Course Id</span></th>
+            <th><span>Hole 1</span></th>
+            <th><span>Hole 2</span></th>
+            <th><span>Hole 3</span></th>
+            <th><span>Hole 4</span></th>
+            <th><span>Hole 5</span></th>
+            <th><span>Hole 6</span></th>
+            <th><span>Hole 7</span></th>
+            <th><span>Hole 8</span></th>
+            <th><span>Hole 9</span></th>
+            <th><span>Hole 10</span></th>
+            <th><span>Hole 11</span></th>
+            <th><span>Hole 12</span></th>
+            <th><span>Hole 13</span></th>
+            <th><span>Hole 14</span></th>
+            <th><span>Hole 15</span></th>
+            <th><span>Hole 16</span></th>
+            <th><span>Hole 17</span></th>
+            <th><span>Hole 18</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let sGApproach of sGApproaches ;trackBy: trackId">
+                <td><a [routerLink]="['/sg-approach', sGApproach.id, 'view' ]">{{sGApproach.id}}</a></td>
+                <td>{{sGApproach.playerId}}</td>
+                <td>{{sGApproach.tournamentId}}</td>
+                <td>{{sGApproach.courseId}}</td>
+                <td>{{sGApproach.hole1}}</td>
+                <td>{{sGApproach.hole2}}</td>
+                <td>{{sGApproach.hole3}}</td>
+                <td>{{sGApproach.hole4}}</td>
+                <td>{{sGApproach.hole5}}</td>
+                <td>{{sGApproach.hole6}}</td>
+                <td>{{sGApproach.hole7}}</td>
+                <td>{{sGApproach.hole8}}</td>
+                <td>{{sGApproach.hole9}}</td>
+                <td>{{sGApproach.hole10}}</td>
+                <td>{{sGApproach.hole11}}</td>
+                <td>{{sGApproach.hole12}}</td>
+                <td>{{sGApproach.hole13}}</td>
+                <td>{{sGApproach.hole14}}</td>
+                <td>{{sGApproach.hole15}}</td>
+                <td>{{sGApproach.hole16}}</td>
+                <td>{{sGApproach.hole17}}</td>
+                <td>{{sGApproach.hole18}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/sg-approach', sGApproach.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sg-approach', sGApproach.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sg-approach', { outlets: { popup: sGApproach.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

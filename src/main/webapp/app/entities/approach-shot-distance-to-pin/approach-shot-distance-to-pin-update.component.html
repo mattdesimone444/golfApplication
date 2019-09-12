@@ -1,0 +1,129 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-approach-shot-distance-to-pin-heading">Create or edit a Approach Shot Distance To Pin</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_playerId">Player Id</label>
+                    <input type="number" class="form-control" name="playerId" id="field_playerId"
+                           formControlName="playerId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_tournamentId">Tournament Id</label>
+                    <input type="number" class="form-control" name="tournamentId" id="field_tournamentId"
+                           formControlName="tournamentId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_courseId">Course Id</label>
+                    <input type="number" class="form-control" name="courseId" id="field_courseId"
+                           formControlName="courseId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole1">Hole 1</label>
+                    <input type="number" class="form-control" name="hole1" id="field_hole1"
+                           formControlName="hole1"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole2">Hole 2</label>
+                    <input type="number" class="form-control" name="hole2" id="field_hole2"
+                           formControlName="hole2"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole3">Hole 3</label>
+                    <input type="number" class="form-control" name="hole3" id="field_hole3"
+                           formControlName="hole3"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole4">Hole 4</label>
+                    <input type="number" class="form-control" name="hole4" id="field_hole4"
+                           formControlName="hole4"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole5">Hole 5</label>
+                    <input type="number" class="form-control" name="hole5" id="field_hole5"
+                           formControlName="hole5"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole6">Hole 6</label>
+                    <input type="number" class="form-control" name="hole6" id="field_hole6"
+                           formControlName="hole6"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole7">Hole 7</label>
+                    <input type="number" class="form-control" name="hole7" id="field_hole7"
+                           formControlName="hole7"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole8">Hole 8</label>
+                    <input type="number" class="form-control" name="hole8" id="field_hole8"
+                           formControlName="hole8"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole9">Hole 9</label>
+                    <input type="number" class="form-control" name="hole9" id="field_hole9"
+                           formControlName="hole9"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole10">Hole 10</label>
+                    <input type="number" class="form-control" name="hole10" id="field_hole10"
+                           formControlName="hole10"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole11">Hole 11</label>
+                    <input type="number" class="form-control" name="hole11" id="field_hole11"
+                           formControlName="hole11"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole12">Hole 12</label>
+                    <input type="number" class="form-control" name="hole12" id="field_hole12"
+                           formControlName="hole12"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole13">Hole 13</label>
+                    <input type="number" class="form-control" name="hole13" id="field_hole13"
+                           formControlName="hole13"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole14">Hole 14</label>
+                    <input type="number" class="form-control" name="hole14" id="field_hole14"
+                           formControlName="hole14"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole15">Hole 15</label>
+                    <input type="number" class="form-control" name="hole15" id="field_hole15"
+                           formControlName="hole15"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole16">Hole 16</label>
+                    <input type="number" class="form-control" name="hole16" id="field_hole16"
+                           formControlName="hole16"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole17">Hole 17</label>
+                    <input type="number" class="form-control" name="hole17" id="field_hole17"
+                           formControlName="hole17"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole18">Hole 18</label>
+                    <input type="number" class="form-control" name="hole18" id="field_hole18"
+                           formControlName="hole18"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

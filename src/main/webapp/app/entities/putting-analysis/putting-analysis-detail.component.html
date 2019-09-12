@@ -1,0 +1,75 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="puttingAnalysis">
+            <h2><span>Putting Analysis</span> {{puttingAnalysis.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Puttin Analysis Id</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.puttinAnalysisId}}</span>
+                </dd>
+                <dt><span>Longest</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.longest}}</span>
+                </dd>
+                <dt><span>Total</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.total}}</span>
+                </dd>
+                <dt><span>Less Three</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.lessThree}}</span>
+                </dd>
+                <dt><span>Less Ten</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.lessTen}}</span>
+                </dd>
+                <dt><span>Three To Five</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.threeToFive}}</span>
+                </dd>
+                <dt><span>Five To Seven</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.fiveToSeven}}</span>
+                </dd>
+                <dt><span>Seven To Ten</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.sevenToTen}}</span>
+                </dd>
+                <dt><span>Four To Eight</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.fourToEight}}</span>
+                </dd>
+                <dt><span>Ten To Fifteen</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.tenToFifteen}}</span>
+                </dd>
+                <dt><span>Fifteen To Twenty</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.fifteenToTwenty}}</span>
+                </dd>
+                <dt><span>Twenty To Twenty Five</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.twentyToTwentyFive}}</span>
+                </dd>
+                <dt><span>Less Twenty Five</span></dt>
+                <dd>
+                    <span>{{puttingAnalysis.lessTwentyFive}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/putting-analysis', puttingAnalysis.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

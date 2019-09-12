@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <!--
+        Added the entity Course.
+    -->
+    <changeSet id="20190912054631-1" author="jhipster">
+        <createTable tableName="course">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="city" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="state" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="course_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="green_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_1_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_1_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_1_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_2_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_2_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_2_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_3_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_3_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_3_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_4_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_4_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_4_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_5_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_5_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_5_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_6_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_6_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_6_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_7_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_7_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_7_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_8_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_8_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_8_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_9_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_9_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_9_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_10_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_10_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_10_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_11_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_11_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_11_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_12_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_12_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_12_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_13_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_13_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_13_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_14_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_14_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_14_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_15_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_15_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_15_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_16_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_16_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_16_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_17_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_17_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_17_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_18_par" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_18_yardage" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hole_18_handicap" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+
+    </changeSet>
+
+    <changeSet id="20190912054631-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20190912054631-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/course.csv"
+                  separator=";"
+                  tableName="course">
+            <column name="id" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="par" type="numeric"/>
+            <column name="yardage" type="numeric"/>
+            <column name="city" type="string"/>
+            <column name="state" type="string"/>
+            <column name="course_type" type="string"/>
+            <column name="green_type" type="string"/>
+            <column name="hole_1_par" type="numeric"/>
+            <column name="hole_1_yardage" type="numeric"/>
+            <column name="hole_1_handicap" type="numeric"/>
+            <column name="hole_2_par" type="numeric"/>
+            <column name="hole_2_yardage" type="numeric"/>
+            <column name="hole_2_handicap" type="numeric"/>
+            <column name="hole_3_par" type="numeric"/>
+            <column name="hole_3_yardage" type="numeric"/>
+            <column name="hole_3_handicap" type="numeric"/>
+            <column name="hole_4_par" type="numeric"/>
+            <column name="hole_4_yardage" type="numeric"/>
+            <column name="hole_4_handicap" type="numeric"/>
+            <column name="hole_5_par" type="numeric"/>
+            <column name="hole_5_yardage" type="numeric"/>
+            <column name="hole_5_handicap" type="numeric"/>
+            <column name="hole_6_par" type="numeric"/>
+            <column name="hole_6_yardage" type="numeric"/>
+            <column name="hole_6_handicap" type="numeric"/>
+            <column name="hole_7_par" type="numeric"/>
+            <column name="hole_7_yardage" type="numeric"/>
+            <column name="hole_7_handicap" type="numeric"/>
+            <column name="hole_8_par" type="numeric"/>
+            <column name="hole_8_yardage" type="numeric"/>
+            <column name="hole_8_handicap" type="numeric"/>
+            <column name="hole_9_par" type="numeric"/>
+            <column name="hole_9_yardage" type="numeric"/>
+            <column name="hole_9_handicap" type="numeric"/>
+            <column name="hole_10_par" type="numeric"/>
+            <column name="hole_10_yardage" type="numeric"/>
+            <column name="hole_10_handicap" type="numeric"/>
+            <column name="hole_11_par" type="numeric"/>
+            <column name="hole_11_yardage" type="numeric"/>
+            <column name="hole_11_handicap" type="numeric"/>
+            <column name="hole_12_par" type="numeric"/>
+            <column name="hole_12_yardage" type="numeric"/>
+            <column name="hole_12_handicap" type="numeric"/>
+            <column name="hole_13_par" type="numeric"/>
+            <column name="hole_13_yardage" type="numeric"/>
+            <column name="hole_13_handicap" type="numeric"/>
+            <column name="hole_14_par" type="numeric"/>
+            <column name="hole_14_yardage" type="numeric"/>
+            <column name="hole_14_handicap" type="numeric"/>
+            <column name="hole_15_par" type="numeric"/>
+            <column name="hole_15_yardage" type="numeric"/>
+            <column name="hole_15_handicap" type="numeric"/>
+            <column name="hole_16_par" type="numeric"/>
+            <column name="hole_16_yardage" type="numeric"/>
+            <column name="hole_16_handicap" type="numeric"/>
+            <column name="hole_17_par" type="numeric"/>
+            <column name="hole_17_yardage" type="numeric"/>
+            <column name="hole_17_handicap" type="numeric"/>
+            <column name="hole_18_par" type="numeric"/>
+            <column name="hole_18_yardage" type="numeric"/>
+            <column name="hole_18_handicap" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

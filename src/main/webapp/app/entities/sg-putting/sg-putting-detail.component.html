@@ -1,0 +1,107 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sGPutting">
+            <h2><span>SG Putting</span> {{sGPutting.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Player Id</span></dt>
+                <dd>
+                    <span>{{sGPutting.playerId}}</span>
+                </dd>
+                <dt><span>Tournament Id</span></dt>
+                <dd>
+                    <span>{{sGPutting.tournamentId}}</span>
+                </dd>
+                <dt><span>Course Id</span></dt>
+                <dd>
+                    <span>{{sGPutting.courseId}}</span>
+                </dd>
+                <dt><span>Hole 1</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole1}}</span>
+                </dd>
+                <dt><span>Hole 2</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole2}}</span>
+                </dd>
+                <dt><span>Hole 3</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole3}}</span>
+                </dd>
+                <dt><span>Hole 4</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole4}}</span>
+                </dd>
+                <dt><span>Hole 5</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole5}}</span>
+                </dd>
+                <dt><span>Hole 6</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole6}}</span>
+                </dd>
+                <dt><span>Hole 7</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole7}}</span>
+                </dd>
+                <dt><span>Hole 8</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole8}}</span>
+                </dd>
+                <dt><span>Hole 9</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole9}}</span>
+                </dd>
+                <dt><span>Hole 10</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole10}}</span>
+                </dd>
+                <dt><span>Hole 11</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole11}}</span>
+                </dd>
+                <dt><span>Hole 12</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole12}}</span>
+                </dd>
+                <dt><span>Hole 13</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole13}}</span>
+                </dd>
+                <dt><span>Hole 14</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole14}}</span>
+                </dd>
+                <dt><span>Hole 15</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole15}}</span>
+                </dd>
+                <dt><span>Hole 16</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole16}}</span>
+                </dd>
+                <dt><span>Hole 17</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole17}}</span>
+                </dd>
+                <dt><span>Hole 18</span></dt>
+                <dd>
+                    <span>{{sGPutting.hole18}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sg-putting', sGPutting.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

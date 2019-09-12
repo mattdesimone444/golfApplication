@@ -1,0 +1,107 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="greensInRegulation">
+            <h2><span>Greens In Regulation</span> {{greensInRegulation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Player Id</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.playerId}}</span>
+                </dd>
+                <dt><span>Tournament Id</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.tournamentId}}</span>
+                </dd>
+                <dt><span>Course Id</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.courseId}}</span>
+                </dd>
+                <dt><span>Hole 1</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole1}}</span>
+                </dd>
+                <dt><span>Hole 2</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole2}}</span>
+                </dd>
+                <dt><span>Hole 3</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole3}}</span>
+                </dd>
+                <dt><span>Hole 4</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole4}}</span>
+                </dd>
+                <dt><span>Hole 5</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole5}}</span>
+                </dd>
+                <dt><span>Hole 6</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole6}}</span>
+                </dd>
+                <dt><span>Hole 7</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole7}}</span>
+                </dd>
+                <dt><span>Hole 8</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole8}}</span>
+                </dd>
+                <dt><span>Hole 9</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole9}}</span>
+                </dd>
+                <dt><span>Hole 10</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole10}}</span>
+                </dd>
+                <dt><span>Hole 11</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole11}}</span>
+                </dd>
+                <dt><span>Hole 12</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole12}}</span>
+                </dd>
+                <dt><span>Hole 13</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole13}}</span>
+                </dd>
+                <dt><span>Hole 14</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole14}}</span>
+                </dd>
+                <dt><span>Hole 15</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole15}}</span>
+                </dd>
+                <dt><span>Hole 16</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole16}}</span>
+                </dd>
+                <dt><span>Hole 17</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole17}}</span>
+                </dd>
+                <dt><span>Hole 18</span></dt>
+                <dd>
+                    <span>{{greensInRegulation.hole18}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/greens-in-regulation', greensInRegulation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

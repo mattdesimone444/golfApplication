@@ -1,0 +1,107 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="approachShotDistanceToPin">
+            <h2><span>Approach Shot Distance To Pin</span> {{approachShotDistanceToPin.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Player Id</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.playerId}}</span>
+                </dd>
+                <dt><span>Tournament Id</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.tournamentId}}</span>
+                </dd>
+                <dt><span>Course Id</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.courseId}}</span>
+                </dd>
+                <dt><span>Hole 1</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole1}}</span>
+                </dd>
+                <dt><span>Hole 2</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole2}}</span>
+                </dd>
+                <dt><span>Hole 3</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole3}}</span>
+                </dd>
+                <dt><span>Hole 4</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole4}}</span>
+                </dd>
+                <dt><span>Hole 5</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole5}}</span>
+                </dd>
+                <dt><span>Hole 6</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole6}}</span>
+                </dd>
+                <dt><span>Hole 7</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole7}}</span>
+                </dd>
+                <dt><span>Hole 8</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole8}}</span>
+                </dd>
+                <dt><span>Hole 9</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole9}}</span>
+                </dd>
+                <dt><span>Hole 10</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole10}}</span>
+                </dd>
+                <dt><span>Hole 11</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole11}}</span>
+                </dd>
+                <dt><span>Hole 12</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole12}}</span>
+                </dd>
+                <dt><span>Hole 13</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole13}}</span>
+                </dd>
+                <dt><span>Hole 14</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole14}}</span>
+                </dd>
+                <dt><span>Hole 15</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole15}}</span>
+                </dd>
+                <dt><span>Hole 16</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole16}}</span>
+                </dd>
+                <dt><span>Hole 17</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole17}}</span>
+                </dd>
+                <dt><span>Hole 18</span></dt>
+                <dd>
+                    <span>{{approachShotDistanceToPin.hole18}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/approach-shot-distance-to-pin', approachShotDistanceToPin.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

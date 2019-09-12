@@ -14,6 +14,26 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054612_added_entity_Golfer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054613_added_entity_Tournament.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054614_added_entity_Scores.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054615_added_entity_SGOffTheTee.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054616_added_entity_TournamentPuttingAnalysis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054617_added_entity_PuttingAnalysis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054618_added_entity_SGTotal.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054619_added_entity_SGTeeToGreen.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054620_added_entity_SGPutting.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054621_added_entity_SGArroundTheGreen.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054622_added_entity_SGApproach.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054623_added_entity_PuttsMadeDistance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054624_added_entity_ApproachShotDistanceToPin.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054625_added_entity_DistanceOfApproach.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054626_added_entity_DrivingDistance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054627_added_entity_Putts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054628_added_entity_SandSaves.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054629_added_entity_GreensInRegulation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054630_added_entity_FairwaysHit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190912054631_added_entity_Course.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

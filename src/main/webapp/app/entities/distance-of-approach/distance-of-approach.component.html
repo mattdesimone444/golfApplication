@@ -1,0 +1,112 @@
+<div>
+    <h2 id="page-heading">
+        <span>Distance Of Approaches</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-distance-of-approach" [routerLink]="['/distance-of-approach/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down" >
+            Create a new Distance Of Approach
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="distanceOfApproaches?.length === 0">
+        <span>No distanceOfApproaches found</span>
+    </div>
+    <div class="table-responsive" *ngIf="distanceOfApproaches?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Player Id</span></th>
+            <th><span>Tournament Id</span></th>
+            <th><span>Course Id</span></th>
+            <th><span>Hole 1</span></th>
+            <th><span>Hole 2</span></th>
+            <th><span>Hole 3</span></th>
+            <th><span>Hole 4</span></th>
+            <th><span>Hole 5</span></th>
+            <th><span>Hole 6</span></th>
+            <th><span>Hole 7</span></th>
+            <th><span>Hole 8</span></th>
+            <th><span>Hole 9</span></th>
+            <th><span>Hole 10</span></th>
+            <th><span>Hole 11</span></th>
+            <th><span>Hole 12</span></th>
+            <th><span>Hole 13</span></th>
+            <th><span>Hole 14</span></th>
+            <th><span>Hole 15</span></th>
+            <th><span>Hole 16</span></th>
+            <th><span>Hole 17</span></th>
+            <th><span>Hole 18</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let distanceOfApproach of distanceOfApproaches ;trackBy: trackId">
+                <td><a [routerLink]="['/distance-of-approach', distanceOfApproach.id, 'view' ]">{{distanceOfApproach.id}}</a></td>
+                <td>{{distanceOfApproach.playerId}}</td>
+                <td>{{distanceOfApproach.tournamentId}}</td>
+                <td>{{distanceOfApproach.courseId}}</td>
+                <td>{{distanceOfApproach.hole1}}</td>
+                <td>{{distanceOfApproach.hole2}}</td>
+                <td>{{distanceOfApproach.hole3}}</td>
+                <td>{{distanceOfApproach.hole4}}</td>
+                <td>{{distanceOfApproach.hole5}}</td>
+                <td>{{distanceOfApproach.hole6}}</td>
+                <td>{{distanceOfApproach.hole7}}</td>
+                <td>{{distanceOfApproach.hole8}}</td>
+                <td>{{distanceOfApproach.hole9}}</td>
+                <td>{{distanceOfApproach.hole10}}</td>
+                <td>{{distanceOfApproach.hole11}}</td>
+                <td>{{distanceOfApproach.hole12}}</td>
+                <td>{{distanceOfApproach.hole13}}</td>
+                <td>{{distanceOfApproach.hole14}}</td>
+                <td>{{distanceOfApproach.hole15}}</td>
+                <td>{{distanceOfApproach.hole16}}</td>
+                <td>{{distanceOfApproach.hole17}}</td>
+                <td>{{distanceOfApproach.hole18}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/distance-of-approach', distanceOfApproach.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/distance-of-approach', distanceOfApproach.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/distance-of-approach', { outlets: { popup: distanceOfApproach.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

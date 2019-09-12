@@ -1,0 +1,329 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-course-heading">Create or edit a Course</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_par">Par</label>
+                    <input type="number" class="form-control" name="par" id="field_par"
+                           formControlName="par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_yardage">Yardage</label>
+                    <input type="number" class="form-control" name="yardage" id="field_yardage"
+                           formControlName="yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_city">City</label>
+                    <input type="text" class="form-control" name="city" id="field_city"
+                           formControlName="city"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_state">State</label>
+                    <input type="text" class="form-control" name="state" id="field_state"
+                           formControlName="state"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_courseType">Course Type</label>
+                    <input type="text" class="form-control" name="courseType" id="field_courseType"
+                           formControlName="courseType"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_greenType">Green Type</label>
+                    <input type="text" class="form-control" name="greenType" id="field_greenType"
+                           formControlName="greenType"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole1Par">Hole 1 Par</label>
+                    <input type="number" class="form-control" name="hole1Par" id="field_hole1Par"
+                           formControlName="hole1Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole1Yardage">Hole 1 Yardage</label>
+                    <input type="number" class="form-control" name="hole1Yardage" id="field_hole1Yardage"
+                           formControlName="hole1Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole1Handicap">Hole 1 Handicap</label>
+                    <input type="number" class="form-control" name="hole1Handicap" id="field_hole1Handicap"
+                           formControlName="hole1Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole2Par">Hole 2 Par</label>
+                    <input type="number" class="form-control" name="hole2Par" id="field_hole2Par"
+                           formControlName="hole2Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole2Yardage">Hole 2 Yardage</label>
+                    <input type="number" class="form-control" name="hole2Yardage" id="field_hole2Yardage"
+                           formControlName="hole2Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole2Handicap">Hole 2 Handicap</label>
+                    <input type="number" class="form-control" name="hole2Handicap" id="field_hole2Handicap"
+                           formControlName="hole2Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole3Par">Hole 3 Par</label>
+                    <input type="number" class="form-control" name="hole3Par" id="field_hole3Par"
+                           formControlName="hole3Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole3Yardage">Hole 3 Yardage</label>
+                    <input type="number" class="form-control" name="hole3Yardage" id="field_hole3Yardage"
+                           formControlName="hole3Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole3Handicap">Hole 3 Handicap</label>
+                    <input type="number" class="form-control" name="hole3Handicap" id="field_hole3Handicap"
+                           formControlName="hole3Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole4Par">Hole 4 Par</label>
+                    <input type="number" class="form-control" name="hole4Par" id="field_hole4Par"
+                           formControlName="hole4Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole4Yardage">Hole 4 Yardage</label>
+                    <input type="number" class="form-control" name="hole4Yardage" id="field_hole4Yardage"
+                           formControlName="hole4Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole4Handicap">Hole 4 Handicap</label>
+                    <input type="number" class="form-control" name="hole4Handicap" id="field_hole4Handicap"
+                           formControlName="hole4Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole5Par">Hole 5 Par</label>
+                    <input type="number" class="form-control" name="hole5Par" id="field_hole5Par"
+                           formControlName="hole5Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole5Yardage">Hole 5 Yardage</label>
+                    <input type="number" class="form-control" name="hole5Yardage" id="field_hole5Yardage"
+                           formControlName="hole5Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole5Handicap">Hole 5 Handicap</label>
+                    <input type="number" class="form-control" name="hole5Handicap" id="field_hole5Handicap"
+                           formControlName="hole5Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole6Par">Hole 6 Par</label>
+                    <input type="number" class="form-control" name="hole6Par" id="field_hole6Par"
+                           formControlName="hole6Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole6Yardage">Hole 6 Yardage</label>
+                    <input type="number" class="form-control" name="hole6Yardage" id="field_hole6Yardage"
+                           formControlName="hole6Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole6Handicap">Hole 6 Handicap</label>
+                    <input type="number" class="form-control" name="hole6Handicap" id="field_hole6Handicap"
+                           formControlName="hole6Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole7Par">Hole 7 Par</label>
+                    <input type="number" class="form-control" name="hole7Par" id="field_hole7Par"
+                           formControlName="hole7Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole7Yardage">Hole 7 Yardage</label>
+                    <input type="number" class="form-control" name="hole7Yardage" id="field_hole7Yardage"
+                           formControlName="hole7Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole7Handicap">Hole 7 Handicap</label>
+                    <input type="number" class="form-control" name="hole7Handicap" id="field_hole7Handicap"
+                           formControlName="hole7Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole8Par">Hole 8 Par</label>
+                    <input type="number" class="form-control" name="hole8Par" id="field_hole8Par"
+                           formControlName="hole8Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole8Yardage">Hole 8 Yardage</label>
+                    <input type="number" class="form-control" name="hole8Yardage" id="field_hole8Yardage"
+                           formControlName="hole8Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole8Handicap">Hole 8 Handicap</label>
+                    <input type="number" class="form-control" name="hole8Handicap" id="field_hole8Handicap"
+                           formControlName="hole8Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole9Par">Hole 9 Par</label>
+                    <input type="number" class="form-control" name="hole9Par" id="field_hole9Par"
+                           formControlName="hole9Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole9Yardage">Hole 9 Yardage</label>
+                    <input type="number" class="form-control" name="hole9Yardage" id="field_hole9Yardage"
+                           formControlName="hole9Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole9Handicap">Hole 9 Handicap</label>
+                    <input type="number" class="form-control" name="hole9Handicap" id="field_hole9Handicap"
+                           formControlName="hole9Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole10Par">Hole 10 Par</label>
+                    <input type="number" class="form-control" name="hole10Par" id="field_hole10Par"
+                           formControlName="hole10Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole10Yardage">Hole 10 Yardage</label>
+                    <input type="number" class="form-control" name="hole10Yardage" id="field_hole10Yardage"
+                           formControlName="hole10Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole10Handicap">Hole 10 Handicap</label>
+                    <input type="number" class="form-control" name="hole10Handicap" id="field_hole10Handicap"
+                           formControlName="hole10Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole11Par">Hole 11 Par</label>
+                    <input type="number" class="form-control" name="hole11Par" id="field_hole11Par"
+                           formControlName="hole11Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole11Yardage">Hole 11 Yardage</label>
+                    <input type="number" class="form-control" name="hole11Yardage" id="field_hole11Yardage"
+                           formControlName="hole11Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole11Handicap">Hole 11 Handicap</label>
+                    <input type="number" class="form-control" name="hole11Handicap" id="field_hole11Handicap"
+                           formControlName="hole11Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole12Par">Hole 12 Par</label>
+                    <input type="number" class="form-control" name="hole12Par" id="field_hole12Par"
+                           formControlName="hole12Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole12Yardage">Hole 12 Yardage</label>
+                    <input type="number" class="form-control" name="hole12Yardage" id="field_hole12Yardage"
+                           formControlName="hole12Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole12Handicap">Hole 12 Handicap</label>
+                    <input type="number" class="form-control" name="hole12Handicap" id="field_hole12Handicap"
+                           formControlName="hole12Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole13Par">Hole 13 Par</label>
+                    <input type="number" class="form-control" name="hole13Par" id="field_hole13Par"
+                           formControlName="hole13Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole13Yardage">Hole 13 Yardage</label>
+                    <input type="number" class="form-control" name="hole13Yardage" id="field_hole13Yardage"
+                           formControlName="hole13Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole13Handicap">Hole 13 Handicap</label>
+                    <input type="number" class="form-control" name="hole13Handicap" id="field_hole13Handicap"
+                           formControlName="hole13Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole14Par">Hole 14 Par</label>
+                    <input type="number" class="form-control" name="hole14Par" id="field_hole14Par"
+                           formControlName="hole14Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole14Yardage">Hole 14 Yardage</label>
+                    <input type="number" class="form-control" name="hole14Yardage" id="field_hole14Yardage"
+                           formControlName="hole14Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole14Handicap">Hole 14 Handicap</label>
+                    <input type="number" class="form-control" name="hole14Handicap" id="field_hole14Handicap"
+                           formControlName="hole14Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole15Par">Hole 15 Par</label>
+                    <input type="number" class="form-control" name="hole15Par" id="field_hole15Par"
+                           formControlName="hole15Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole15Yardage">Hole 15 Yardage</label>
+                    <input type="number" class="form-control" name="hole15Yardage" id="field_hole15Yardage"
+                           formControlName="hole15Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole15Handicap">Hole 15 Handicap</label>
+                    <input type="number" class="form-control" name="hole15Handicap" id="field_hole15Handicap"
+                           formControlName="hole15Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole16Par">Hole 16 Par</label>
+                    <input type="number" class="form-control" name="hole16Par" id="field_hole16Par"
+                           formControlName="hole16Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole16Yardage">Hole 16 Yardage</label>
+                    <input type="number" class="form-control" name="hole16Yardage" id="field_hole16Yardage"
+                           formControlName="hole16Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole16Handicap">Hole 16 Handicap</label>
+                    <input type="number" class="form-control" name="hole16Handicap" id="field_hole16Handicap"
+                           formControlName="hole16Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole17Par">Hole 17 Par</label>
+                    <input type="number" class="form-control" name="hole17Par" id="field_hole17Par"
+                           formControlName="hole17Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole17Yardage">Hole 17 Yardage</label>
+                    <input type="number" class="form-control" name="hole17Yardage" id="field_hole17Yardage"
+                           formControlName="hole17Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole17Handicap">Hole 17 Handicap</label>
+                    <input type="number" class="form-control" name="hole17Handicap" id="field_hole17Handicap"
+                           formControlName="hole17Handicap"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole18Par">Hole 18 Par</label>
+                    <input type="number" class="form-control" name="hole18Par" id="field_hole18Par"
+                           formControlName="hole18Par"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole18Yardage">Hole 18 Yardage</label>
+                    <input type="number" class="form-control" name="hole18Yardage" id="field_hole18Yardage"
+                           formControlName="hole18Yardage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hole18Handicap">Hole 18 Handicap</label>
+                    <input type="number" class="form-control" name="hole18Handicap" id="field_hole18Handicap"
+                           formControlName="hole18Handicap"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

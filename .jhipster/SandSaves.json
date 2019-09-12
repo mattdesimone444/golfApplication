@@ -1,0 +1,99 @@
+{
+    "name": "SandSaves",
+    "fields": [
+        {
+            "fieldName": "playerId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tournamentId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "courseId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "hole1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole4",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole6",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole7",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole8",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole9",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole10",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole11",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole12",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole13",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole14",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole15",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole16",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole17",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole18",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190912054628",
+    "entityTableName": "sand_saves",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,67 @@
+{
+    "name": "PuttingAnalysis",
+    "fields": [
+        {
+            "fieldName": "puttinAnalysisId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "longest",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lessThree",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lessTen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "threeToFive",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fiveToSeven",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sevenToTen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fourToEight",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tenToFifteen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fifteenToTwenty",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "twentyToTwentyFive",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lessTwentyFive",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190912054617",
+    "entityTableName": "putting_analysis",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

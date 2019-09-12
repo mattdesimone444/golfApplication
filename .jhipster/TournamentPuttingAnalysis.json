@@ -1,0 +1,43 @@
+{
+    "name": "TournamentPuttingAnalysis",
+    "fields": [
+        {
+            "fieldName": "playerId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tournamentId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "courseId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "roundOneId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "roundTwoId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "roundThreeId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "roundFourId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190912054616",
+    "entityTableName": "tournament_putting_analysis",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

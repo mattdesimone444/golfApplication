@@ -1,0 +1,267 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="course">
+            <h2><span>Course</span> {{course.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{course.name}}</span>
+                </dd>
+                <dt><span>Par</span></dt>
+                <dd>
+                    <span>{{course.par}}</span>
+                </dd>
+                <dt><span>Yardage</span></dt>
+                <dd>
+                    <span>{{course.yardage}}</span>
+                </dd>
+                <dt><span>City</span></dt>
+                <dd>
+                    <span>{{course.city}}</span>
+                </dd>
+                <dt><span>State</span></dt>
+                <dd>
+                    <span>{{course.state}}</span>
+                </dd>
+                <dt><span>Course Type</span></dt>
+                <dd>
+                    <span>{{course.courseType}}</span>
+                </dd>
+                <dt><span>Green Type</span></dt>
+                <dd>
+                    <span>{{course.greenType}}</span>
+                </dd>
+                <dt><span>Hole 1 Par</span></dt>
+                <dd>
+                    <span>{{course.hole1Par}}</span>
+                </dd>
+                <dt><span>Hole 1 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole1Yardage}}</span>
+                </dd>
+                <dt><span>Hole 1 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole1Handicap}}</span>
+                </dd>
+                <dt><span>Hole 2 Par</span></dt>
+                <dd>
+                    <span>{{course.hole2Par}}</span>
+                </dd>
+                <dt><span>Hole 2 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole2Yardage}}</span>
+                </dd>
+                <dt><span>Hole 2 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole2Handicap}}</span>
+                </dd>
+                <dt><span>Hole 3 Par</span></dt>
+                <dd>
+                    <span>{{course.hole3Par}}</span>
+                </dd>
+                <dt><span>Hole 3 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole3Yardage}}</span>
+                </dd>
+                <dt><span>Hole 3 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole3Handicap}}</span>
+                </dd>
+                <dt><span>Hole 4 Par</span></dt>
+                <dd>
+                    <span>{{course.hole4Par}}</span>
+                </dd>
+                <dt><span>Hole 4 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole4Yardage}}</span>
+                </dd>
+                <dt><span>Hole 4 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole4Handicap}}</span>
+                </dd>
+                <dt><span>Hole 5 Par</span></dt>
+                <dd>
+                    <span>{{course.hole5Par}}</span>
+                </dd>
+                <dt><span>Hole 5 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole5Yardage}}</span>
+                </dd>
+                <dt><span>Hole 5 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole5Handicap}}</span>
+                </dd>
+                <dt><span>Hole 6 Par</span></dt>
+                <dd>
+                    <span>{{course.hole6Par}}</span>
+                </dd>
+                <dt><span>Hole 6 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole6Yardage}}</span>
+                </dd>
+                <dt><span>Hole 6 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole6Handicap}}</span>
+                </dd>
+                <dt><span>Hole 7 Par</span></dt>
+                <dd>
+                    <span>{{course.hole7Par}}</span>
+                </dd>
+                <dt><span>Hole 7 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole7Yardage}}</span>
+                </dd>
+                <dt><span>Hole 7 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole7Handicap}}</span>
+                </dd>
+                <dt><span>Hole 8 Par</span></dt>
+                <dd>
+                    <span>{{course.hole8Par}}</span>
+                </dd>
+                <dt><span>Hole 8 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole8Yardage}}</span>
+                </dd>
+                <dt><span>Hole 8 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole8Handicap}}</span>
+                </dd>
+                <dt><span>Hole 9 Par</span></dt>
+                <dd>
+                    <span>{{course.hole9Par}}</span>
+                </dd>
+                <dt><span>Hole 9 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole9Yardage}}</span>
+                </dd>
+                <dt><span>Hole 9 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole9Handicap}}</span>
+                </dd>
+                <dt><span>Hole 10 Par</span></dt>
+                <dd>
+                    <span>{{course.hole10Par}}</span>
+                </dd>
+                <dt><span>Hole 10 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole10Yardage}}</span>
+                </dd>
+                <dt><span>Hole 10 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole10Handicap}}</span>
+                </dd>
+                <dt><span>Hole 11 Par</span></dt>
+                <dd>
+                    <span>{{course.hole11Par}}</span>
+                </dd>
+                <dt><span>Hole 11 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole11Yardage}}</span>
+                </dd>
+                <dt><span>Hole 11 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole11Handicap}}</span>
+                </dd>
+                <dt><span>Hole 12 Par</span></dt>
+                <dd>
+                    <span>{{course.hole12Par}}</span>
+                </dd>
+                <dt><span>Hole 12 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole12Yardage}}</span>
+                </dd>
+                <dt><span>Hole 12 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole12Handicap}}</span>
+                </dd>
+                <dt><span>Hole 13 Par</span></dt>
+                <dd>
+                    <span>{{course.hole13Par}}</span>
+                </dd>
+                <dt><span>Hole 13 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole13Yardage}}</span>
+                </dd>
+                <dt><span>Hole 13 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole13Handicap}}</span>
+                </dd>
+                <dt><span>Hole 14 Par</span></dt>
+                <dd>
+                    <span>{{course.hole14Par}}</span>
+                </dd>
+                <dt><span>Hole 14 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole14Yardage}}</span>
+                </dd>
+                <dt><span>Hole 14 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole14Handicap}}</span>
+                </dd>
+                <dt><span>Hole 15 Par</span></dt>
+                <dd>
+                    <span>{{course.hole15Par}}</span>
+                </dd>
+                <dt><span>Hole 15 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole15Yardage}}</span>
+                </dd>
+                <dt><span>Hole 15 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole15Handicap}}</span>
+                </dd>
+                <dt><span>Hole 16 Par</span></dt>
+                <dd>
+                    <span>{{course.hole16Par}}</span>
+                </dd>
+                <dt><span>Hole 16 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole16Yardage}}</span>
+                </dd>
+                <dt><span>Hole 16 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole16Handicap}}</span>
+                </dd>
+                <dt><span>Hole 17 Par</span></dt>
+                <dd>
+                    <span>{{course.hole17Par}}</span>
+                </dd>
+                <dt><span>Hole 17 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole17Yardage}}</span>
+                </dd>
+                <dt><span>Hole 17 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole17Handicap}}</span>
+                </dd>
+                <dt><span>Hole 18 Par</span></dt>
+                <dd>
+                    <span>{{course.hole18Par}}</span>
+                </dd>
+                <dt><span>Hole 18 Yardage</span></dt>
+                <dd>
+                    <span>{{course.hole18Yardage}}</span>
+                </dd>
+                <dt><span>Hole 18 Handicap</span></dt>
+                <dd>
+                    <span>{{course.hole18Handicap}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/course', course.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

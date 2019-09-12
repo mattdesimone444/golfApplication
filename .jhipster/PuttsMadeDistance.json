@@ -1,0 +1,99 @@
+{
+    "name": "PuttsMadeDistance",
+    "fields": [
+        {
+            "fieldName": "playerId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tournamentId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "courseId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "hole1",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole2",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole3",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole4",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole5",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole6",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole7",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole8",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole9",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole10",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole11",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole12",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole13",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole14",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole15",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole16",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole17",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole18",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190912054623",
+    "entityTableName": "putts_made_distance",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

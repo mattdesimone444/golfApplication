@@ -1,0 +1,259 @@
+{
+    "name": "Course",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "courseType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "greenType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hole1Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole1Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole1Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole2Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole2Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole2Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole3Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole3Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole3Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole4Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole4Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole4Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole5Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole5Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole5Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole6Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole6Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole6Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole7Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole7Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole7Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole8Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole8Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole8Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole9Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole9Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole9Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole10Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole10Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole10Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole11Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole11Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole11Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole12Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole12Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole12Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole13Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole13Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole13Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole14Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole14Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole14Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole15Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole15Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole15Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole16Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole16Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole16Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole17Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole17Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole17Handicap",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole18Par",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole18Yardage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hole18Handicap",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190912054631",
+    "entityTableName": "course",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

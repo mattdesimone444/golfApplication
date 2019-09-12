@@ -1,0 +1,107 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sGApproach">
+            <h2><span>SG Approach</span> {{sGApproach.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Player Id</span></dt>
+                <dd>
+                    <span>{{sGApproach.playerId}}</span>
+                </dd>
+                <dt><span>Tournament Id</span></dt>
+                <dd>
+                    <span>{{sGApproach.tournamentId}}</span>
+                </dd>
+                <dt><span>Course Id</span></dt>
+                <dd>
+                    <span>{{sGApproach.courseId}}</span>
+                </dd>
+                <dt><span>Hole 1</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole1}}</span>
+                </dd>
+                <dt><span>Hole 2</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole2}}</span>
+                </dd>
+                <dt><span>Hole 3</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole3}}</span>
+                </dd>
+                <dt><span>Hole 4</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole4}}</span>
+                </dd>
+                <dt><span>Hole 5</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole5}}</span>
+                </dd>
+                <dt><span>Hole 6</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole6}}</span>
+                </dd>
+                <dt><span>Hole 7</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole7}}</span>
+                </dd>
+                <dt><span>Hole 8</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole8}}</span>
+                </dd>
+                <dt><span>Hole 9</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole9}}</span>
+                </dd>
+                <dt><span>Hole 10</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole10}}</span>
+                </dd>
+                <dt><span>Hole 11</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole11}}</span>
+                </dd>
+                <dt><span>Hole 12</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole12}}</span>
+                </dd>
+                <dt><span>Hole 13</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole13}}</span>
+                </dd>
+                <dt><span>Hole 14</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole14}}</span>
+                </dd>
+                <dt><span>Hole 15</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole15}}</span>
+                </dd>
+                <dt><span>Hole 16</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole16}}</span>
+                </dd>
+                <dt><span>Hole 17</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole17}}</span>
+                </dd>
+                <dt><span>Hole 18</span></dt>
+                <dd>
+                    <span>{{sGApproach.hole18}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sg-approach', sGApproach.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

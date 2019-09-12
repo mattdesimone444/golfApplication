@@ -1,0 +1,51 @@
+{
+    "name": "Golfer",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "height",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "residenceCity",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "residenceState",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "playsFromCity",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "playsFromState",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "turnedPro",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190912054612",
+    "entityTableName": "golfer",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

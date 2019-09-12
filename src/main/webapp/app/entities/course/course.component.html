@@ -1,0 +1,192 @@
+<div>
+    <h2 id="page-heading">
+        <span>Courses</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-course" [routerLink]="['/course/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down" >
+            Create a new Course
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="courses?.length === 0">
+        <span>No courses found</span>
+    </div>
+    <div class="table-responsive" *ngIf="courses?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Name</span></th>
+            <th><span>Par</span></th>
+            <th><span>Yardage</span></th>
+            <th><span>City</span></th>
+            <th><span>State</span></th>
+            <th><span>Course Type</span></th>
+            <th><span>Green Type</span></th>
+            <th><span>Hole 1 Par</span></th>
+            <th><span>Hole 1 Yardage</span></th>
+            <th><span>Hole 1 Handicap</span></th>
+            <th><span>Hole 2 Par</span></th>
+            <th><span>Hole 2 Yardage</span></th>
+            <th><span>Hole 2 Handicap</span></th>
+            <th><span>Hole 3 Par</span></th>
+            <th><span>Hole 3 Yardage</span></th>
+            <th><span>Hole 3 Handicap</span></th>
+            <th><span>Hole 4 Par</span></th>
+            <th><span>Hole 4 Yardage</span></th>
+            <th><span>Hole 4 Handicap</span></th>
+            <th><span>Hole 5 Par</span></th>
+            <th><span>Hole 5 Yardage</span></th>
+            <th><span>Hole 5 Handicap</span></th>
+            <th><span>Hole 6 Par</span></th>
+            <th><span>Hole 6 Yardage</span></th>
+            <th><span>Hole 6 Handicap</span></th>
+            <th><span>Hole 7 Par</span></th>
+            <th><span>Hole 7 Yardage</span></th>
+            <th><span>Hole 7 Handicap</span></th>
+            <th><span>Hole 8 Par</span></th>
+            <th><span>Hole 8 Yardage</span></th>
+            <th><span>Hole 8 Handicap</span></th>
+            <th><span>Hole 9 Par</span></th>
+            <th><span>Hole 9 Yardage</span></th>
+            <th><span>Hole 9 Handicap</span></th>
+            <th><span>Hole 10 Par</span></th>
+            <th><span>Hole 10 Yardage</span></th>
+            <th><span>Hole 10 Handicap</span></th>
+            <th><span>Hole 11 Par</span></th>
+            <th><span>Hole 11 Yardage</span></th>
+            <th><span>Hole 11 Handicap</span></th>
+            <th><span>Hole 12 Par</span></th>
+            <th><span>Hole 12 Yardage</span></th>
+            <th><span>Hole 12 Handicap</span></th>
+            <th><span>Hole 13 Par</span></th>
+            <th><span>Hole 13 Yardage</span></th>
+            <th><span>Hole 13 Handicap</span></th>
+            <th><span>Hole 14 Par</span></th>
+            <th><span>Hole 14 Yardage</span></th>
+            <th><span>Hole 14 Handicap</span></th>
+            <th><span>Hole 15 Par</span></th>
+            <th><span>Hole 15 Yardage</span></th>
+            <th><span>Hole 15 Handicap</span></th>
+            <th><span>Hole 16 Par</span></th>
+            <th><span>Hole 16 Yardage</span></th>
+            <th><span>Hole 16 Handicap</span></th>
+            <th><span>Hole 17 Par</span></th>
+            <th><span>Hole 17 Yardage</span></th>
+            <th><span>Hole 17 Handicap</span></th>
+            <th><span>Hole 18 Par</span></th>
+            <th><span>Hole 18 Yardage</span></th>
+            <th><span>Hole 18 Handicap</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let course of courses ;trackBy: trackId">
+                <td><a [routerLink]="['/course', course.id, 'view' ]">{{course.id}}</a></td>
+                <td>{{course.name}}</td>
+                <td>{{course.par}}</td>
+                <td>{{course.yardage}}</td>
+                <td>{{course.city}}</td>
+                <td>{{course.state}}</td>
+                <td>{{course.courseType}}</td>
+                <td>{{course.greenType}}</td>
+                <td>{{course.hole1Par}}</td>
+                <td>{{course.hole1Yardage}}</td>
+                <td>{{course.hole1Handicap}}</td>
+                <td>{{course.hole2Par}}</td>
+                <td>{{course.hole2Yardage}}</td>
+                <td>{{course.hole2Handicap}}</td>
+                <td>{{course.hole3Par}}</td>
+                <td>{{course.hole3Yardage}}</td>
+                <td>{{course.hole3Handicap}}</td>
+                <td>{{course.hole4Par}}</td>
+                <td>{{course.hole4Yardage}}</td>
+                <td>{{course.hole4Handicap}}</td>
+                <td>{{course.hole5Par}}</td>
+                <td>{{course.hole5Yardage}}</td>
+                <td>{{course.hole5Handicap}}</td>
+                <td>{{course.hole6Par}}</td>
+                <td>{{course.hole6Yardage}}</td>
+                <td>{{course.hole6Handicap}}</td>
+                <td>{{course.hole7Par}}</td>
+                <td>{{course.hole7Yardage}}</td>
+                <td>{{course.hole7Handicap}}</td>
+                <td>{{course.hole8Par}}</td>
+                <td>{{course.hole8Yardage}}</td>
+                <td>{{course.hole8Handicap}}</td>
+                <td>{{course.hole9Par}}</td>
+                <td>{{course.hole9Yardage}}</td>
+                <td>{{course.hole9Handicap}}</td>
+                <td>{{course.hole10Par}}</td>
+                <td>{{course.hole10Yardage}}</td>
+                <td>{{course.hole10Handicap}}</td>
+                <td>{{course.hole11Par}}</td>
+                <td>{{course.hole11Yardage}}</td>
+                <td>{{course.hole11Handicap}}</td>
+                <td>{{course.hole12Par}}</td>
+                <td>{{course.hole12Yardage}}</td>
+                <td>{{course.hole12Handicap}}</td>
+                <td>{{course.hole13Par}}</td>
+                <td>{{course.hole13Yardage}}</td>
+                <td>{{course.hole13Handicap}}</td>
+                <td>{{course.hole14Par}}</td>
+                <td>{{course.hole14Yardage}}</td>
+                <td>{{course.hole14Handicap}}</td>
+                <td>{{course.hole15Par}}</td>
+                <td>{{course.hole15Yardage}}</td>
+                <td>{{course.hole15Handicap}}</td>
+                <td>{{course.hole16Par}}</td>
+                <td>{{course.hole16Yardage}}</td>
+                <td>{{course.hole16Handicap}}</td>
+                <td>{{course.hole17Par}}</td>
+                <td>{{course.hole17Yardage}}</td>
+                <td>{{course.hole17Handicap}}</td>
+                <td>{{course.hole18Par}}</td>
+                <td>{{course.hole18Yardage}}</td>
+                <td>{{course.hole18Handicap}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/course', course.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/course', course.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/course', { outlets: { popup: course.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+{
+    "name": "SGTeeToGreen",
+    "fields": [
+        {
+            "fieldName": "playerId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tournamentId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "courseId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "hole1",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole2",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole3",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole4",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole5",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole6",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole7",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole8",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole9",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole10",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole11",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole12",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole13",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole14",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole15",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole16",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole17",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hole18",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190912054619",
+    "entityTableName": "sg_tee_to_green",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
