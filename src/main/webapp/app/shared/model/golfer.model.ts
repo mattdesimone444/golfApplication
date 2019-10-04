@@ -9,6 +9,7 @@ export interface IGolfer {
   playsFromCity?: string;
   playsFromState?: string;
   turnedPro?: number;
+  pgaId?: number;
 }
 
 export class Golfer implements IGolfer {
@@ -22,6 +23,7 @@ export class Golfer implements IGolfer {
     public residenceState?: string,
     public playsFromCity?: string,
     public playsFromState?: string,
-    public turnedPro?: number
+    public turnedPro?: number,
+    public pgaId?: number
   ) {}
 }

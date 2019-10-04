@@ -47,6 +47,9 @@ public class Golfer implements Serializable {
     @Column(name = "turned_pro")
     private Integer turnedPro;
 
+    @Column(name = "pga_id")
+    private Long pgaId;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -172,6 +175,19 @@ public class Golfer implements Serializable {
     public void setTurnedPro(Integer turnedPro) {
         this.turnedPro = turnedPro;
     }
+
+    public Long getPgaId() {
+        return pgaId;
+    }
+
+    public Golfer pgaId(Long pgaId) {
+        this.pgaId = pgaId;
+        return this;
+    }
+
+    public void setPgaId(Long pgaId) {
+        this.pgaId = pgaId;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -203,6 +219,7 @@ public class Golfer implements Serializable {
             ", playsFromCity='" + getPlaysFromCity() + "'" +
             ", playsFromState='" + getPlaysFromState() + "'" +
             ", turnedPro=" + getTurnedPro() +
+            ", pgaId=" + getPgaId() +
             "}";
     }
 }

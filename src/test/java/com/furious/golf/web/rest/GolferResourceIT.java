@@ -68,6 +68,10 @@ public class GolferResourceIT {
     private static final Integer UPDATED_TURNED_PRO = 2;
     private static final Integer SMALLER_TURNED_PRO = 1 - 1;
 
+    private static final Long DEFAULT_PGA_ID = 1L;
+    private static final Long UPDATED_PGA_ID = 2L;
+    private static final Long SMALLER_PGA_ID = 1L - 1L;
+
     @Autowired
     private GolferRepository golferRepository;
 
@@ -126,7 +130,8 @@ public class GolferResourceIT {
             .residenceState(DEFAULT_RESIDENCE_STATE)
             .playsFromCity(DEFAULT_PLAYS_FROM_CITY)
             .playsFromState(DEFAULT_PLAYS_FROM_STATE)
-            .turnedPro(DEFAULT_TURNED_PRO);
+            .turnedPro(DEFAULT_TURNED_PRO)
+            .pgaId(DEFAULT_PGA_ID);
         return golfer;
     }
     /**
@@ -145,7 +150,8 @@ public class GolferResourceIT {
             .residenceState(UPDATED_RESIDENCE_STATE)
             .playsFromCity(UPDATED_PLAYS_FROM_CITY)
             .playsFromState(UPDATED_PLAYS_FROM_STATE)
-            .turnedPro(UPDATED_TURNED_PRO);
+            .turnedPro(UPDATED_TURNED_PRO)
+            .pgaId(UPDATED_PGA_ID);
         return golfer;
     }
 
@@ -178,6 +184,7 @@ public class GolferResourceIT {
         assertThat(testGolfer.getPlaysFromCity()).isEqualTo(DEFAULT_PLAYS_FROM_CITY);
         assertThat(testGolfer.getPlaysFromState()).isEqualTo(DEFAULT_PLAYS_FROM_STATE);
         assertThat(testGolfer.getTurnedPro()).isEqualTo(DEFAULT_TURNED_PRO);
+        assertThat(testGolfer.getPgaId()).isEqualTo(DEFAULT_PGA_ID);
 
         // Validate the Golfer in Elasticsearch
         verify(mockGolferSearchRepository, times(1)).save(testGolfer);
@@ -225,7 +232,8 @@ public class GolferResourceIT {
             .andExpect(jsonPath("$.[*].residenceState").value(hasItem(DEFAULT_RESIDENCE_STATE.toString())))
             .andExpect(jsonPath("$.[*].playsFromCity").value(hasItem(DEFAULT_PLAYS_FROM_CITY.toString())))
             .andExpect(jsonPath("$.[*].playsFromState").value(hasItem(DEFAULT_PLAYS_FROM_STATE.toString())))
-            .andExpect(jsonPath("$.[*].turnedPro").value(hasItem(DEFAULT_TURNED_PRO)));
+            .andExpect(jsonPath("$.[*].turnedPro").value(hasItem(DEFAULT_TURNED_PRO)))
+            .andExpect(jsonPath("$.[*].pgaId").value(hasItem(DEFAULT_PGA_ID.intValue())));
     }
     
     @Test
@@ -247,7 +255,8 @@ public class GolferResourceIT {
             .andExpect(jsonPath("$.residenceState").value(DEFAULT_RESIDENCE_STATE.toString()))
             .andExpect(jsonPath("$.playsFromCity").value(DEFAULT_PLAYS_FROM_CITY.toString()))
             .andExpect(jsonPath("$.playsFromState").value(DEFAULT_PLAYS_FROM_STATE.toString()))
-            .andExpect(jsonPath("$.turnedPro").value(DEFAULT_TURNED_PRO));
+            .andExpect(jsonPath("$.turnedPro").value(DEFAULT_TURNED_PRO))
+            .andExpect(jsonPath("$.pgaId").value(DEFAULT_PGA_ID.intValue()));
     }
 
     @Test
@@ -279,7 +288,8 @@ public class GolferResourceIT {
             .residenceState(UPDATED_RESIDENCE_STATE)
             .playsFromCity(UPDATED_PLAYS_FROM_CITY)
             .playsFromState(UPDATED_PLAYS_FROM_STATE)
-            .turnedPro(UPDATED_TURNED_PRO);
+            .turnedPro(UPDATED_TURNED_PRO)
+            .pgaId(UPDATED_PGA_ID);
 
         restGolferMockMvc.perform(put("/api/golfers")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -299,6 +309,7 @@ public class GolferResourceIT {
         assertThat(testGolfer.getPlaysFromCity()).isEqualTo(UPDATED_PLAYS_FROM_CITY);
         assertThat(testGolfer.getPlaysFromState()).isEqualTo(UPDATED_PLAYS_FROM_STATE);
         assertThat(testGolfer.getTurnedPro()).isEqualTo(UPDATED_TURNED_PRO);
+        assertThat(testGolfer.getPgaId()).isEqualTo(UPDATED_PGA_ID);
 
         // Validate the Golfer in Elasticsearch
         verify(mockGolferSearchRepository, times(1)).save(testGolfer);
@@ -366,7 +377,8 @@ public class GolferResourceIT {
             .andExpect(jsonPath("$.[*].residenceState").value(hasItem(DEFAULT_RESIDENCE_STATE)))
             .andExpect(jsonPath("$.[*].playsFromCity").value(hasItem(DEFAULT_PLAYS_FROM_CITY)))
             .andExpect(jsonPath("$.[*].playsFromState").value(hasItem(DEFAULT_PLAYS_FROM_STATE)))
-            .andExpect(jsonPath("$.[*].turnedPro").value(hasItem(DEFAULT_TURNED_PRO)));
+            .andExpect(jsonPath("$.[*].turnedPro").value(hasItem(DEFAULT_TURNED_PRO)))
+            .andExpect(jsonPath("$.[*].pgaId").value(hasItem(DEFAULT_PGA_ID.intValue())));
     }
 
     @Test

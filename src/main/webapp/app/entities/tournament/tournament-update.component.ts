@@ -23,7 +23,9 @@ export class TournamentUpdateComponent implements OnInit {
     startDate: [],
     endDate: [],
     purse: [],
-    courseId: []
+    courseId: [],
+    pgaId: [],
+    pgaSeasonId: []
   });
 
   constructor(protected tournamentService: TournamentService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -43,7 +45,9 @@ export class TournamentUpdateComponent implements OnInit {
       startDate: tournament.startDate,
       endDate: tournament.endDate,
       purse: tournament.purse,
-      courseId: tournament.courseId
+      courseId: tournament.courseId,
+      pgaId: tournament.pgaId,
+      pgaSeasonId: tournament.pgaSeasonId
     });
   }
 
@@ -70,7 +74,9 @@ export class TournamentUpdateComponent implements OnInit {
       startDate: this.editForm.get(['startDate']).value,
       endDate: this.editForm.get(['endDate']).value,
       purse: this.editForm.get(['purse']).value,
-      courseId: this.editForm.get(['courseId']).value
+      courseId: this.editForm.get(['courseId']).value,
+      pgaId: this.editForm.get(['pgaId']).value,
+      pgaSeasonId: this.editForm.get(['pgaSeasonId']).value
     };
   }
 

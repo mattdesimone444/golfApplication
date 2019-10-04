@@ -1,5 +1,7 @@
 {
-    "name": "Golfer",
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
     "fields": [
         {
             "fieldName": "name",
@@ -36,16 +38,18 @@
         {
             "fieldName": "turnedPro",
             "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pgaId",
+            "fieldType": "Long"
         }
     ],
-    "relationships": [],
     "changelogDate": "20190912054612",
-    "entityTableName": "golfer",
     "dto": "no",
-    "pagination": "no",
+    "searchEngine": "elasticsearch",
     "service": "no",
+    "entityTableName": "golfer",
+    "databaseType": "sql",
     "jpaMetamodelFiltering": false,
-    "fluentMethods": true,
-    "clientRootFolder": "",
-    "applications": "*"
+    "pagination": "no"
 }

@@ -23,7 +23,7 @@ describe('Service Tests', () => {
       service = injector.get(GolferService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new Golfer(0, 'AAAAAAA', 0, 0, 0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 0);
+      elemDefault = new Golfer(0, 'AAAAAAA', 0, 0, 0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 0, 0);
     });
 
     describe('Service methods', () => {
@@ -67,7 +67,8 @@ describe('Service Tests', () => {
             residenceState: 'BBBBBB',
             playsFromCity: 'BBBBBB',
             playsFromState: 'BBBBBB',
-            turnedPro: 1
+            turnedPro: 1,
+            pgaId: 1
           },
           elemDefault
         );
@@ -93,7 +94,8 @@ describe('Service Tests', () => {
             residenceState: 'BBBBBB',
             playsFromCity: 'BBBBBB',
             playsFromState: 'BBBBBB',
-            turnedPro: 1
+            turnedPro: 1,
+            pgaId: 1
           },
           elemDefault
         );

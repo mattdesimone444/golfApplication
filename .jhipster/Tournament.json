@@ -24,7 +24,15 @@
         {
             "fieldName": "courseId",
             "fieldType": "Long"
-        }
+        },
+      {
+        "fieldName": "pgaId",
+        "fieldType": "Long"
+      },
+      {
+        "fieldName": "pgaSeasonId",
+        "fieldType": "Long"
+      }
     ],
     "relationships": [],
     "changelogDate": "20190912054613",

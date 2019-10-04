@@ -8,6 +8,8 @@ export interface ITournament {
   endDate?: Moment;
   purse?: number;
   courseId?: number;
+  pgaId?: number;
+  pgaSeasonId?: number;
 }
 
 export class Tournament implements ITournament {
@@ -18,6 +20,8 @@ export class Tournament implements ITournament {
     public startDate?: Moment,
     public endDate?: Moment,
     public purse?: number,
-    public courseId?: number
+    public courseId?: number,
+    public pgaId?: number,
+    public pgaSeasonId?: number
   ) {}
 }

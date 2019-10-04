@@ -23,7 +23,8 @@ export class GolferUpdateComponent implements OnInit {
     residenceState: [],
     playsFromCity: [],
     playsFromState: [],
-    turnedPro: []
+    turnedPro: [],
+    pgaId: []
   });
 
   constructor(protected golferService: GolferService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -46,7 +47,8 @@ export class GolferUpdateComponent implements OnInit {
       residenceState: golfer.residenceState,
       playsFromCity: golfer.playsFromCity,
       playsFromState: golfer.playsFromState,
-      turnedPro: golfer.turnedPro
+      turnedPro: golfer.turnedPro,
+      pgaId: golfer.pgaId
     });
   }
 
@@ -76,7 +78,8 @@ export class GolferUpdateComponent implements OnInit {
       residenceState: this.editForm.get(['residenceState']).value,
       playsFromCity: this.editForm.get(['playsFromCity']).value,
       playsFromState: this.editForm.get(['playsFromState']).value,
-      turnedPro: this.editForm.get(['turnedPro']).value
+      turnedPro: this.editForm.get(['turnedPro']).value,
+      pgaId: this.editForm.get(['pgaId']).value
     };
   }
 

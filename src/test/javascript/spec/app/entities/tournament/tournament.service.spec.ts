@@ -27,7 +27,7 @@ describe('Service Tests', () => {
       httpMock = injector.get(HttpTestingController);
       currentDate = moment();
 
-      elemDefault = new Tournament(0, 'AAAAAAA', 0, currentDate, currentDate, 0, 0);
+      elemDefault = new Tournament(0, 'AAAAAAA', 0, currentDate, currentDate, 0, 0, 0, 0);
     });
 
     describe('Service methods', () => {
@@ -82,7 +82,9 @@ describe('Service Tests', () => {
             startDate: currentDate.format(DATE_FORMAT),
             endDate: currentDate.format(DATE_FORMAT),
             purse: 1,
-            courseId: 1
+            courseId: 1,
+            pgaId: 1,
+            pgaSeasonId: 1
           },
           elemDefault
         );
@@ -111,7 +113,9 @@ describe('Service Tests', () => {
             startDate: currentDate.format(DATE_FORMAT),
             endDate: currentDate.format(DATE_FORMAT),
             purse: 1,
-            courseId: 1
+            courseId: 1,
+            pgaId: 1,
+            pgaSeasonId: 1
           },
           elemDefault
         );
