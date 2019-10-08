@@ -8,6 +8,10 @@ import com.furious.golf.web.rest.errors.BadRequestAlertException;
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -119,6 +124,19 @@ public class GolferResource {
     @GetMapping("/loadGolfers")
     public void  loadGolfers(){
         log.debug("loading golfers");
+        try {
+            FileReader reader = new FileReader("players.json");
+            JSONParser jsonParser = new JSONParser();
+            JSONObject jsonObject = (JSONObject)jsonParser.parse(reader);
+            System.out.println(jsonObject);
+            Object tour = jsonObject.get("tour");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
     /**
