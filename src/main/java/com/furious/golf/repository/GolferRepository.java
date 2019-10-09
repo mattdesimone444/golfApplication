@@ -11,5 +11,6 @@ import org.springframework.stereotype.Repository;
 @SuppressWarnings("unused")
 @Repository
 public interface GolferRepository extends JpaRepository<Golfer, Long> {
+    Golfer findFirstByAgeIsNull();
 
 }
