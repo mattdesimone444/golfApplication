@@ -15,7 +15,10 @@ public class Scrape {
 
                 //File input = new File("/tmp/input.html");
                 try {
-                    Document document = Jsoup.parse( new File( "/Users/chris/Downloads/Scorecard.html" ) , "utf-8" );
+                    Document document = Jsoup.connect("https://tfdfreports.pgatourhq.com/inquiry/prod/scorecard.cfm?t=R&year=2018&trnpn=027&id=47959&trnsn=480").get();
+
+                    //https://tfdfreports.pgatourhq.com/inquiry/prod/scorecard.cfm?t=R&year=2018&trnpn=027&id=47959&trnsn=480
+                    //Document document = Jsoup.parse( new File( "/Users/chris/Downloads/Scorecard.html" ) , "utf-8" );
                     //System.out.println(document.title());
                     Elements docs = document.getAllElements();
                     Element table = document.getElementsByTag("table").get(0);

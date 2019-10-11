@@ -24,10 +24,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.text.html.parser.DTD;
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
@@ -131,11 +133,19 @@ public class GolferResource {
         Golfer firstByAgeIsNull = golferRepository.findFirstByAgeIsNull();
         System.out.println(firstByAgeIsNull.getName());
         try {
-            //Document doc = Jsoup.parse("https://pbiosfiles.shotlink.com/ApplicationFiles/playerbios/index.html?id=" + firstByAgeIsNull.getPgaId());
-            Document document = Jsoup.parse( new File( "Player Profile - Byeong Hun An.html" ) , "utf-8" );
+            Document doc = Jsoup.connect("https://www.pgatour.com/players/player.33948.byeong-hun-an.html").get();
+            //Document document = Jsoup.parse( new File( "Player Profile - Byeong Hun An.html" ) , "utf-8" );
 
-            System.out.println(document.toString());
+            System.out.println(doc.toString());
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Runtime rt = Runtime.getRuntime();
+        String url = "https://pbiosfiles.shotlink.com/ApplicationFiles/playerbios/index.html?id=" + firstByAgeIsNull.getPgaId();
+        try {
+            rt.exec("open " + url);
         } catch (IOException e) {
             e.printStackTrace();
         }
