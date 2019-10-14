@@ -15,11 +15,11 @@ public class Scrape {
 
                 //File input = new File("/tmp/input.html");
                 try {
-                    Document document = Jsoup.connect("https://tfdfreports.pgatourhq.com/inquiry/prod/scorecard.cfm?t=R&year=2018&trnpn=027&id=47959&trnsn=480").get();
+                    //Document document = Jsoup.connect("https://tfdfreports.pgatourhq.com/inquiry/prod/scorecard.cfm?t=R&year=2018&trnpn=027&id=47959&trnsn=480").get();
 
                     //https://tfdfreports.pgatourhq.com/inquiry/prod/scorecard.cfm?t=R&year=2018&trnpn=027&id=47959&trnsn=480
-                    //Document document = Jsoup.parse( new File( "/Users/chris/Downloads/Scorecard.html" ) , "utf-8" );
-                    //System.out.println(document.title());
+                    Document document = Jsoup.parse( new File( "/Users/chris/Downloads/Scorecard.html" ) , "utf-8" );
+                    //System.out.println(document.toString());
                     Elements docs = document.getAllElements();
                     Element table = document.getElementsByTag("table").get(0);
                     Elements allElements = table.getAllElements();
@@ -27,19 +27,25 @@ public class Scrape {
                     String playerName = allElements.get(3).text();
                     String tourny = allElements.get(8).text();
                     String pos =  allElements.get(10).text();
-
-                    Element table2 = document.getElementsByTag("table").get(83);
+                    System.out.println(playerName);
+                    Element table2 = document.getElementsByTag("table").get(1);
                     Elements allElements2 = table2.getAllElements();
 
                     Element table3 = document.getElementsByTag("table").get(83);
                     Elements allElements3 = table3.getAllElements();
-                    for  (int i = 0; i < allElements3.size(); i++)
-                    {
-                        System.out.println("tag " + i + " : " + allElements3.get(i).tagName());
-                        System.out.println("text " + i + " : " + allElements3.get(i).text());
+                    Elements allTables = document.getElementsByTag("table");
+                    for(int x = 0; x < allTables.size(); x++) {
+                        Element element = allTables.get(x);
+                        System.out.println("TABLE " + x);
+                        allElements = element.getAllElements();
+                        for (int i = 0; i < allElements.size(); i++) {
+                            // System.out.println("tag " + i + " : " + allElements3.get(i).tagName());
+                            System.out.println("    text " + i + " : " + allElements.get(i).text());
+                        }
                     }
 
                     String course =  allElements2.get(81).text();
+                    System.out.println(course);
                     String hole1Par =  allElements2.get(86).text();
                     String hole2Par =  allElements2.get(87).text();
                     String hole3Par =  allElements2.get(88).text();
