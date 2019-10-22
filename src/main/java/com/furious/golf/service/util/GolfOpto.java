@@ -95,20 +95,39 @@ public class GolfOpto {
             mainLineup.setG1(first);
             playersFirst.remove(first.getSiteId());
 
-
-            List<GolfOptoPlayer> playerPool = removePlayer( first,firstSlot);
-            List<GolfOptoPlayer> secondPlayers = new ArrayList<>();
-            secondPlayers = getOptimal(playerPool,3);
+            List<GolfOptoPlayer> secondPlayers = getOptimal(new ArrayList(playersFirst.values()),3);
             for (GolfOptoPlayer second : secondPlayers) {
-                HashMap<String, GolfOptoPlayer> playersSecond = new HashMap<>(players);
+                Map<String, GolfOptoPlayer> playersSecond = listToMap(secondPlayers);
                 mainLineup.setG2(second);
-                playersFirst.remove(second.getSiteId());
+                playersSecond.remove(second.getSiteId());
 
+                List<GolfOptoPlayer> thirdPlayers = getOptimal(new ArrayList(playersSecond.values()),3);
+                for (GolfOptoPlayer third : thirdPlayers) {
+                    Map<String, GolfOptoPlayer> playersThird = listToMap(thirdPlayers);
+                    mainLineup.setG3(third);
+                    playersThird.remove(third.getSiteId());
 
-                playerPool = removePlayer( first,firstSlot);
-                List<GolfOptoPlayer> playerArrayList = new ArrayList<>();
-                secondPlayers = getOptimal(playerPool,3);
+                    List<GolfOptoPlayer> fourthPlayers =getOptimal(new ArrayList(playersThird.values()),3);
+                    for (GolfOptoPlayer fourth : fourthPlayers) {
+                        Map<String, GolfOptoPlayer> playersFourth = listToMap(fourthPlayers);
+                        mainLineup.setG4(fourth);
+                        playersFourth.remove(fourth.getSiteId());
 
+                        List<GolfOptoPlayer> fifthPlayers = getOptimal(new ArrayList(playersFourth.values()),3);
+                        for (GolfOptoPlayer fifth : fifthPlayers) {
+                            Map<String, GolfOptoPlayer> playersFifth = listToMap(fifthPlayers);
+                            mainLineup.setG5(fifth);
+                            playersFifth.remove(fifth.getSiteId());
+
+                            List<GolfOptoPlayer> sixthPlayers = getOptimal(new ArrayList(playersFifth.values()),3);
+                            for (GolfOptoPlayer sixth : sixthPlayers) {
+                                mainLineup.setG6(sixth);
+
+                            }
+                        }
+                    }
+
+                }
 
             }
 
@@ -171,11 +190,11 @@ public class GolfOpto {
 
         return returnList;
     }
-    private List<GolfOptoPlayer> removePlayer(GolfOptoPlayer playerUsed, List<GolfOptoPlayer> playerPool){
+    private Map<String, GolfOptoPlayer> listToMap( List<GolfOptoPlayer> playerPool){
         Map<String, GolfOptoPlayer> map = playerPool.stream()
             .collect(Collectors.toMap(GolfOptoPlayer::getSiteId, p -> p));
-        map.remove(playerUsed.getSiteId());
 
-        return new ArrayList(map.values());
+
+        return map;
     }
 }
