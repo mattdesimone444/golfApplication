@@ -45,7 +45,7 @@ public class GolfOpto {
                     playerProjections.setSiteId(golfer[4]);
                     playerProjections.setSalary(Integer.valueOf(golfer[2]));
                     if (golfer.length > 18) {
-                        playerProjections.setMax(Integer.valueOf(golfer[20]) + 15);
+                        playerProjections.setMax(Integer.valueOf(golfer[20]) + 10);
 
                         playerProjections.setProj(Double.valueOf(golfer[19]));
                     }
@@ -534,6 +534,7 @@ public class GolfOpto {
         firstSlot = getOptimalTop2(playerList, 7);
 
         for (GolfOptoPlayer first : firstSlot) {
+            //System.out.println(first.getPlayerName() + "|" + first.getSalary() + "|" + first.getValue() +"| " + first.getProj()  );
             GolfOptoLineup mainLineup = new GolfOptoLineup();
             HashMap<String, GolfOptoPlayer> playersFirst = new HashMap<>(players);
             mainLineup.setG1(first);
@@ -541,6 +542,7 @@ public class GolfOpto {
 
             List<GolfOptoPlayer> secondPlayers = getOptimal(new ArrayList(playersFirst.values()), 4);
             for (GolfOptoPlayer second : secondPlayers) {
+
                 Map<String, GolfOptoPlayer> playersSecond = new HashMap<>(playersFirst);
                 GolfOptoLineup mainLineup2 = new GolfOptoLineup(mainLineup);
                 mainLineup2.setG2(second);
@@ -553,7 +555,7 @@ public class GolfOpto {
                     mainLineup3.setG3(third);
                     playersThird.remove(third.getSiteId());
 
-                    List<GolfOptoPlayer> fourthPlayers = getOptimal(new ArrayList(playersThird.values()), 8);
+                    List<GolfOptoPlayer> fourthPlayers = getOptimal(new ArrayList(playersThird.values()), 10);
                     for (GolfOptoPlayer fourth : fourthPlayers) {
                         Map<String, GolfOptoPlayer> playersFourth = new HashMap<>(playersThird);
                         GolfOptoLineup mainLineup4 = new GolfOptoLineup(mainLineup3);
@@ -628,6 +630,7 @@ public class GolfOpto {
 
         List<GolfOptoPlayer> returnList = new ArrayList<>();
         int secCount = unique;
+        Map<String,GolfOptoPlayer> returnMap = new HashMap<>();
 
         if (players != null) {
             if (players.size() == 1) {
@@ -642,7 +645,7 @@ public class GolfOpto {
             if (players.size() > 1 && players.size() >= secCount) {
                 int count = secCount;
                 for (int i = 0; i < count; i++) {
-
+                    returnMap.put(players.get(i).getPlayerName(),players.get(i));
                     returnList.add(players.get(i));
                 }
 
@@ -653,6 +656,7 @@ public class GolfOpto {
                 for (int i = 0; i < count; i++) {
 
                     if (!returnList.get(0).equals(players.get(i))) {
+                        returnMap.put(players.get(i).getPlayerName(),players.get(i));
                         returnList.add(players.get(i));
                     }
                 }
@@ -660,6 +664,7 @@ public class GolfOpto {
             else {
                 int count = players.size();
                 for (int i = 0; i < count; i++) {
+                    returnMap.put(players.get(i).getPlayerName(),players.get(i));
                     returnList.add(players.get(i));
                 }
 
@@ -668,6 +673,7 @@ public class GolfOpto {
                 for (int i = 0; i < count; i++) {
 
                     if (!returnList.get(0).equals(players.get(i))) {
+                        returnMap.put(players.get(i).getPlayerName(),players.get(i));
                         returnList.add(players.get(i));
                     }
                 }
@@ -675,7 +681,9 @@ public class GolfOpto {
         }
 
 
-        return returnList;
+        return returnMap.values().stream()
+            .collect(Collectors.toList());
+
     }
 
     private static Map<String, GolfOptoPlayer> listToMap(List<GolfOptoPlayer> playerPool) {
