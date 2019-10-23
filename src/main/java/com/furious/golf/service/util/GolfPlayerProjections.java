@@ -91,4 +91,20 @@ public class GolfPlayerProjections {
     public void setActual(double actual) {
         this.actual = actual;
     }
+
+    @Override
+    public String toString() {
+        return "GolfPlayerProjections{" +
+            "playerId='" + playerId + '\'' +
+            ", locked=" + locked +
+            ", max=" + max +
+            ", siteId='" + siteId + '\'' +
+            ", playerName='" + playerName + '\'' +
+            ", proj=" + proj +
+            ", pos='" + pos + '\'' +
+            ", ownership=" + ownership +
+            ", salary=" + salary +
+            ", actual=" + actual +
+            '}';
+    }
 }
