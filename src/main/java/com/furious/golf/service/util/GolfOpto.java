@@ -2,6 +2,7 @@ package com.furious.golf.service.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,9 +10,20 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import static java.util.stream.Collectors.*;
+import static java.util.Map.Entry.*;
+
+import static java.util.Map.Entry.comparingByValue;
 
 public class GolfOpto {
     public static void main(String[] args) throws IOException {
@@ -31,7 +43,7 @@ public class GolfOpto {
                     playerProjections.setPlayerId(golfer[4]);
                     playerProjections.setSiteId(golfer[4]);
                     if (golfer.length > 18) {
-                        playerProjections.setMax(Integer.valueOf(golfer[20]) + 5);
+                        playerProjections.setMax(Integer.valueOf(golfer[20]) + 4);
 
                         playerProjections.setProj(Double.valueOf(golfer[19]));
                     }
@@ -56,11 +68,81 @@ public class GolfOpto {
             e.printStackTrace();
         }
         GolfOptoSettings settings = new GolfOptoSettings();
-        settings.setNumberLineups(20);
+        settings.setNumberLineups(40);
         settings.setUniquePlayers(3);
 
-        GolfOpto.getBestLineups(settings, projections, "DraftKings");
+        List<GolfOptoLineup> draftKings = GolfOpto.getBestLineups(settings, projections, "DraftKings");
+        Map<String, Integer> playerCounts = new HashMap<>();
+        for(GolfOptoLineup golfOptoLineup : draftKings){
+            //System.out.println(golfOptoLineup.toString());
+            if(playerCounts.get(golfOptoLineup.getG1().getPlayerName()) != null){
+                int count = playerCounts.get(golfOptoLineup.getG1().getPlayerName());
+                count++;
+                playerCounts.put(golfOptoLineup.getG1().getPlayerName(),count);
+            }else{
+                playerCounts.put(golfOptoLineup.getG1().getPlayerName(),1);
+            }
 
+            if(playerCounts.get(golfOptoLineup.getG2().getPlayerName()) != null){
+                int count = playerCounts.get(golfOptoLineup.getG2().getPlayerName());
+                count++;
+                playerCounts.put(golfOptoLineup.getG2().getPlayerName(),count);
+            }else{
+                playerCounts.put(golfOptoLineup.getG2().getPlayerName(),1);
+            }
+
+            if(playerCounts.get(golfOptoLineup.getG3().getPlayerName()) != null){
+                int count = playerCounts.get(golfOptoLineup.getG3().getPlayerName());
+                count++;
+                playerCounts.put(golfOptoLineup.getG3().getPlayerName(),count);
+            }else{
+                playerCounts.put(golfOptoLineup.getG3().getPlayerName(),1);
+            }
+
+            if(playerCounts.get(golfOptoLineup.getG4().getPlayerName()) != null){
+                int count = playerCounts.get(golfOptoLineup.getG4().getPlayerName());
+                count++;
+                playerCounts.put(golfOptoLineup.getG4().getPlayerName(),count);
+            }else{
+                playerCounts.put(golfOptoLineup.getG4().getPlayerName(),1);
+            }
+
+            if(playerCounts.get(golfOptoLineup.getG5().getPlayerName()) != null){
+                int count = playerCounts.get(golfOptoLineup.getG5().getPlayerName());
+                count++;
+                playerCounts.put(golfOptoLineup.getG5().getPlayerName(),count);
+            }else{
+                playerCounts.put(golfOptoLineup.getG5().getPlayerName(),1);
+            }
+
+            if(playerCounts.get(golfOptoLineup.getG6().getPlayerName()) != null){
+                int count = playerCounts.get(golfOptoLineup.getG6().getPlayerName());
+                count++;
+                playerCounts.put(golfOptoLineup.getG6().getPlayerName(),count);
+            }else{
+                playerCounts.put(golfOptoLineup.getG6().getPlayerName(),1);
+            }
+        }
+
+        Map<String, Integer> sorted = playerCounts
+            .entrySet()
+            .stream()
+            .sorted(comparingByValue())
+            .collect(
+                toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2,
+                    LinkedHashMap::new));
+        sorted = playerCounts
+            .entrySet()
+            .stream()
+            .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+            .collect(
+                toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2,
+                    LinkedHashMap::new));
+
+        System.out.println(sorted);
+        sorted.entrySet().forEach(entry->{
+            System.out.println(entry.getKey() + "," + entry.getValue());
+        });
     }
 
     public static List<GolfOptoLineup> getBestLineups(GolfOptoSettings settings,
@@ -103,12 +185,13 @@ public class GolfOpto {
             player.setMinExposure(0.0D);
             if (projection.getMax() == 0) {
 
-                player.setMaxExposure(settings.getGlobalExposure());
+                player.setMaxExposure(0);
             }
             else {
                 System.out.println(player.getPlayerName() + " : " + projection.getMax());
                 double exposure = settings.getNumberLineups() * ((double) projection.getMax() / 100);
                 player.setMaxExposure(exposure);
+                System.out.println(exposure);
             }
             golfers.put(player.getSiteId(), player);
             players.put(player.getSiteId(), player);
@@ -303,7 +386,8 @@ public class GolfOpto {
                             .getMaxExposure());
                         maxPlayer = true;
                     }
-
+                    playerCountMap = setPlayerCount(playerCountMap, thisLineup.getG2().getSiteId());
+                    integer = playerCountMap.get(thisLineup.getG2().getSiteId());
                     if (integer >= thisLineup.getG2().getMaxExposure()) {
                         players.remove(thisLineup.getG2().getSiteId());
                         //break;
@@ -311,7 +395,8 @@ public class GolfOpto {
                             .getMaxExposure());
                         maxPlayer = true;
                     }
-
+                    playerCountMap = setPlayerCount(playerCountMap, thisLineup.getG3().getSiteId());
+                    integer = playerCountMap.get(thisLineup.getG3().getSiteId());
                     if (integer >= thisLineup.getG3().getMaxExposure()) {
                         players.remove(thisLineup.getG3().getSiteId());
                         //break;
@@ -319,7 +404,8 @@ public class GolfOpto {
                             .getMaxExposure());
                         maxPlayer = true;
                     }
-
+                    playerCountMap = setPlayerCount(playerCountMap, thisLineup.getG4().getSiteId());
+                    integer = playerCountMap.get(thisLineup.getG4().getSiteId());
                     if (integer >= thisLineup.getG4().getMaxExposure()) {
                         players.remove(thisLineup.getG4().getSiteId());
                         //break;
@@ -327,7 +413,8 @@ public class GolfOpto {
                             .getMaxExposure());
                         maxPlayer = true;
                     }
-
+                    playerCountMap = setPlayerCount(playerCountMap, thisLineup.getG5().getSiteId());
+                    integer = playerCountMap.get(thisLineup.getG5().getSiteId());
                     if (integer >= thisLineup.getG5().getMaxExposure()) {
                         players.remove(thisLineup.getG5().getSiteId());
                         //break;
@@ -335,7 +422,8 @@ public class GolfOpto {
                             .getMaxExposure());
                         maxPlayer = true;
                     }
-
+                    playerCountMap = setPlayerCount(playerCountMap, thisLineup.getG6().getSiteId());
+                    integer = playerCountMap.get(thisLineup.getG6().getSiteId());
                     if (integer >= thisLineup.getG6().getMaxExposure()) {
                         players.remove(thisLineup.getG6().getSiteId());
                         //break;
@@ -378,10 +466,30 @@ public class GolfOpto {
         }
 
         int counter = 0;
-        for (GolfOptoLineup lineup : bestLineups) {
+        try {
+            FileWriter csvWriter = new FileWriter("new.csv");
 
+        for (GolfOptoLineup lineup : bestLineups) {
+            csvWriter.append(lineup.getG1().getSiteId());
+            csvWriter.append(",");
+            csvWriter.append(lineup.getG2().getSiteId());
+            csvWriter.append(",");
+            csvWriter.append(lineup.getG3().getSiteId());
+            csvWriter.append(",");
+            csvWriter.append(lineup.getG4().getSiteId());
+            csvWriter.append(",");
+            csvWriter.append(lineup.getG5().getSiteId());
+            csvWriter.append(",");
+            csvWriter.append(lineup.getG6().getSiteId());
+            csvWriter.append("\n");
             counter++;
             //System.out.println(lineup.toString() + " | " + lineup.getHash());
+        }
+            csvWriter.flush();
+            csvWriter.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
         Iterator it = playerCountMap.entrySet().iterator();
         while (it.hasNext()) {
@@ -511,6 +619,7 @@ public class GolfOpto {
             if (players.size() > 1 && players.size() >= secCount) {
                 int count = secCount;
                 for (int i = 0; i < count; i++) {
+
                     returnList.add(players.get(i));
                 }
 

@@ -107,4 +107,21 @@ public class GolfOptoPlayer {
     public void setPlayerId(String playerId) {
         this.playerId = playerId;
     }
+
+    @Override
+    public String toString() {
+        return "GolfOptoPlayer{" +
+            "siteId='" + siteId + '\'' +
+            ", playerName='" + playerName + '\'' +
+            ", salary=" + salary +
+            ", proj=" + proj +
+            ", ownership=" + ownership +
+            ", minExposure=" + minExposure +
+            ", maxExposure=" + maxExposure +
+            ", value=" + value +
+            ", hash=" + hash +
+            ", actual=" + actual +
+            ", playerId='" + playerId + '\'' +
+            '}';
+    }
 }

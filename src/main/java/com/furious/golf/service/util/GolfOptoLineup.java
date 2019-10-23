@@ -146,4 +146,21 @@ public class GolfOptoLineup {
 
         return salary;
     }
+
+    @Override
+    public String toString() {
+        return "GolfOptoLineup{" +
+            "g1=" + g1 +
+            ", g2=" + g2 +
+            ", g3=" + g3 +
+            ", g4=" + g4 +
+            ", g5=" + g5 +
+            ", g6=" + g6 +
+            ", salary=" + salary +
+            ", projPoints=" + projPoints +
+            ", ownership=" + ownership +
+            ", actual=" + actual +
+            ", hash=" + hash +
+            '}';
+    }
 }
