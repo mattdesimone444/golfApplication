@@ -13,6 +13,7 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.Collections;
 import java.util.Comparator;
@@ -42,8 +43,9 @@ public class GolfOpto {
                     playerProjections.setPlayerName(golfer[3]);
                     playerProjections.setPlayerId(golfer[4]);
                     playerProjections.setSiteId(golfer[4]);
+                    playerProjections.setSalary(Integer.valueOf(golfer[2]));
                     if (golfer.length > 18) {
-                        playerProjections.setMax(Integer.valueOf(golfer[20]) + 4);
+                        playerProjections.setMax(Integer.valueOf(golfer[20]) + 5);
 
                         playerProjections.setProj(Double.valueOf(golfer[19]));
                     }
@@ -168,6 +170,7 @@ public class GolfOpto {
 
             double value = projection.getProj() * 1000;
             value = value / projection.getSalary();
+            System.out.println(player.getPlayerName() + " " + player.getValue());
             player.setValue(value);
             if (projection.isLocked()) {
                 player.setProj(projection.getProj() + 50);
@@ -528,7 +531,7 @@ public class GolfOpto {
 
         List<GolfOptoPlayer> firstSlot = new ArrayList<>();
         ArrayList playerList = new ArrayList(players.values());
-        firstSlot = getOptimal(playerList, 3);
+        firstSlot = getOptimalTop2(playerList, 4);
 
         for (GolfOptoPlayer first : firstSlot) {
             GolfOptoLineup mainLineup = new GolfOptoLineup();
@@ -543,28 +546,28 @@ public class GolfOpto {
                 mainLineup2.setG2(second);
                 playersSecond.remove(second.getSiteId());
 
-                List<GolfOptoPlayer> thirdPlayers = getOptimal(new ArrayList(playersSecond.values()), 3);
+                List<GolfOptoPlayer> thirdPlayers = getOptimal(new ArrayList(playersSecond.values()), 6);
                 for (GolfOptoPlayer third : thirdPlayers) {
                     Map<String, GolfOptoPlayer> playersThird = new HashMap<>(playersSecond);
                     GolfOptoLineup mainLineup3 = new GolfOptoLineup(mainLineup2);
                     mainLineup3.setG3(third);
                     playersThird.remove(third.getSiteId());
 
-                    List<GolfOptoPlayer> fourthPlayers = getOptimal(new ArrayList(playersThird.values()), 3);
+                    List<GolfOptoPlayer> fourthPlayers = getOptimal(new ArrayList(playersThird.values()), 6);
                     for (GolfOptoPlayer fourth : fourthPlayers) {
                         Map<String, GolfOptoPlayer> playersFourth = new HashMap<>(playersThird);
                         GolfOptoLineup mainLineup4 = new GolfOptoLineup(mainLineup3);
                         mainLineup4.setG4(fourth);
                         playersFourth.remove(fourth.getSiteId());
 
-                        List<GolfOptoPlayer> fifthPlayers = getOptimal(new ArrayList(playersFourth.values()), 3);
+                        List<GolfOptoPlayer> fifthPlayers = getOptimal(new ArrayList(playersFourth.values()), 15);
                         for (GolfOptoPlayer fifth : fifthPlayers) {
                             Map<String, GolfOptoPlayer> playersFifth = new HashMap<>(playersFourth);
                             GolfOptoLineup mainLineup5 = new GolfOptoLineup(mainLineup4);
                             mainLineup5.setG5(fifth);
                             playersFifth.remove(fifth.getSiteId());
 
-                            List<GolfOptoPlayer> sixthPlayers = getOptimal(new ArrayList(playersFifth.values()), 3);
+                            List<GolfOptoPlayer> sixthPlayers = getOptimal(new ArrayList(playersFifth.values()), 50);
                             for (GolfOptoPlayer sixth : sixthPlayers) {
                                 GolfOptoLineup mainLineup6 = new GolfOptoLineup(mainLineup5);
                                 mainLineup6.setG6(sixth);
@@ -601,6 +604,26 @@ public class GolfOpto {
 
     }
 
+    public static List<GolfOptoPlayer> getOptimalTop2(List<GolfOptoPlayer> players, int unique) {
+        players.sort(Comparator.comparingDouble(GolfOptoPlayer::getProj).reversed());
+        int count = unique;
+        List<GolfOptoPlayer> returnList = new ArrayList<>();
+        List<GolfOptoPlayer> returnList2 = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            //System.out.println(players.get(i).getPlayerName());
+            returnList.add(players.get(i));
+
+        }
+        Random rand = new Random();
+        int randomNum = rand.nextInt((returnList.size() - 0) + 1) + 0;
+        returnList2.add(players.get(randomNum));
+       randomNum = rand.nextInt((returnList.size() - 0) + 1) + 0;
+        returnList2.add(players.get(randomNum));
+        randomNum = rand.nextInt((returnList.size() - 0) + 1) + 0;
+        returnList2.add(players.get(randomNum));
+
+        return returnList;
+    }
     public static List<GolfOptoPlayer> getOptimal(List<GolfOptoPlayer> players, int unique) {
 
         List<GolfOptoPlayer> returnList = new ArrayList<>();
@@ -624,12 +647,15 @@ public class GolfOpto {
                 }
 
                 players.sort(Comparator.comparingDouble(GolfOptoPlayer::getProj).reversed());
-                if (players.size() < secCount) {
-                    count = players.size();
+
+                for (int i = 0; i < count; i++) {
+                    if (!returnList.get(0).equals(players.get(i))) {
+                        returnList.add(players.get(i));
+                    }
                 }
-                else {
-                    count = secCount;
-                }
+
+                players.sort(Comparator.comparingDouble(GolfOptoPlayer::getSalary));
+
                 for (int i = 0; i < count; i++) {
                     if (!returnList.get(0).equals(players.get(i))) {
                         returnList.add(players.get(i));
@@ -643,18 +669,17 @@ public class GolfOpto {
                 }
 
                 players.sort(Comparator.comparingDouble(GolfOptoPlayer::getProj).reversed());
-                if (players.size() < players.size()) {
-                    count = players.size();
-                }
-                else {
-                    count = players.size();
-                }
                 for (int i = 0; i < count; i++) {
                     if (!returnList.get(0).equals(players.get(i))) {
                         returnList.add(players.get(i));
                     }
                 }
-
+                players.sort(Comparator.comparingDouble(GolfOptoPlayer::getSalary));
+                for (int i = 0; i < count; i++) {
+                    if (!returnList.get(0).equals(players.get(i))) {
+                        returnList.add(players.get(i));
+                    }
+                }
             }
         }
 
