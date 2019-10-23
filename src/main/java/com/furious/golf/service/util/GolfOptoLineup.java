@@ -13,6 +13,18 @@ public class GolfOptoLineup {
     double actual;
     int hash;
 
+    public GolfOptoLineup() {
+    }
+
+    public GolfOptoLineup(GolfOptoLineup mainLineup) {
+        this.g1 = mainLineup.getG1();
+        this.g2 = mainLineup.getG2();
+        this.g3 = mainLineup.getG3();
+        this.g4 = mainLineup.getG4();
+        this.g5 = mainLineup.getG5();
+        this.g6 = mainLineup.getG6();
+    }
+
     public GolfOptoPlayer getG1() {
         return g1;
     }
@@ -61,8 +73,24 @@ public class GolfOptoLineup {
         this.g6 = g6;
     }
 
-    public int getSalary() {
-        return salary;
+    public int getHash() {
+        //System.out.println(this.qb.getProj() + " | " + this.rb1.getProj() + " | " + this.rb2.getProj());
+        return this.g1.getHash()
+            + this.g2.getHash()
+            + this.g3.getHash()
+            + this.g4.getHash()
+            + this.g5.getHash()
+            + this.g6.getHash();
+
+    }
+
+    public double getOwnership() {
+        return this.g1.getOwnership()
+            + this.g2.getOwnership()
+            + this.g3.getOwnership()
+            + this.g4.getOwnership()
+            + this.g5.getOwnership()
+            + this.g6.getOwnership();
     }
 
     public void setSalary(int salary) {
@@ -77,9 +105,6 @@ public class GolfOptoLineup {
         this.projPoints = projPoints;
     }
 
-    public double getOwnership() {
-        return ownership;
-    }
 
     public void setOwnership(double ownership) {
         this.ownership = ownership;
@@ -93,11 +118,32 @@ public class GolfOptoLineup {
         this.actual = actual;
     }
 
-    public int getHash() {
-        return hash;
-    }
+
 
     public void setHash(int hash) {
         this.hash = hash;
+    }
+    public int getSalary() {
+        int salary = 0;
+        if (this.g1 != null) {
+            salary = salary + g1.getSalary();
+        }
+        if (this.g2 != null) {
+            salary = salary + g2.getSalary();
+        }
+        if (this.g3 != null) {
+            salary = salary + g3.getSalary();
+        }
+        if (this.g4 != null) {
+            salary = salary + g4.getSalary();
+        }
+        if (this.g5 != null) {
+            salary = salary + g5.getSalary();
+        }
+        if (this.g6 != null) {
+            salary = salary + g6.getSalary();
+        }
+
+        return salary;
     }
 }

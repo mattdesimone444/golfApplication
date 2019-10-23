@@ -69,7 +69,8 @@ public class GolfOpto {
                 "Best Lineups Size " + new Date() + " | " + bestLineups.size() + " For Lineup Count " + settings
                     .getNumberLineups() + " Player size " + players.size());
             List<GolfOptoLineup> optos = getOptos(players, settings, site, optosize);
-
+            optos.sort(Comparator.comparingDouble(GolfOptoLineup::getProjPoints).reversed());
+            System.out.println("Opto done " + new Date() + " size " + optos.size());
         }
         return null;
     }
@@ -98,30 +99,54 @@ public class GolfOpto {
             List<GolfOptoPlayer> secondPlayers = getOptimal(new ArrayList(playersFirst.values()),3);
             for (GolfOptoPlayer second : secondPlayers) {
                 Map<String, GolfOptoPlayer> playersSecond = listToMap(secondPlayers);
-                mainLineup.setG2(second);
+                GolfOptoLineup mainLineup2 = new GolfOptoLineup(mainLineup);
+                mainLineup2.setG2(second);
                 playersSecond.remove(second.getSiteId());
 
                 List<GolfOptoPlayer> thirdPlayers = getOptimal(new ArrayList(playersSecond.values()),3);
                 for (GolfOptoPlayer third : thirdPlayers) {
                     Map<String, GolfOptoPlayer> playersThird = listToMap(thirdPlayers);
-                    mainLineup.setG3(third);
+                    GolfOptoLineup mainLineup3 = new GolfOptoLineup(mainLineup2);
+                    mainLineup3.setG3(third);
                     playersThird.remove(third.getSiteId());
 
                     List<GolfOptoPlayer> fourthPlayers =getOptimal(new ArrayList(playersThird.values()),3);
                     for (GolfOptoPlayer fourth : fourthPlayers) {
                         Map<String, GolfOptoPlayer> playersFourth = listToMap(fourthPlayers);
-                        mainLineup.setG4(fourth);
+                        GolfOptoLineup mainLineup4 = new GolfOptoLineup(mainLineup3);
+                        mainLineup4.setG4(fourth);
                         playersFourth.remove(fourth.getSiteId());
 
                         List<GolfOptoPlayer> fifthPlayers = getOptimal(new ArrayList(playersFourth.values()),3);
                         for (GolfOptoPlayer fifth : fifthPlayers) {
                             Map<String, GolfOptoPlayer> playersFifth = listToMap(fifthPlayers);
-                            mainLineup.setG5(fifth);
+                            GolfOptoLineup mainLineup5 = new GolfOptoLineup(mainLineup4);
+                            mainLineup5.setG5(fifth);
                             playersFifth.remove(fifth.getSiteId());
 
                             List<GolfOptoPlayer> sixthPlayers = getOptimal(new ArrayList(playersFifth.values()),3);
                             for (GolfOptoPlayer sixth : sixthPlayers) {
-                                mainLineup.setG6(sixth);
+                                GolfOptoLineup mainLineup6 = new GolfOptoLineup(mainLineup5);
+                                mainLineup6.setG6(sixth);
+
+                                if (site.equals("DraftKings")) {
+                                    if (mainLineup6.getSalary() > 50000) {
+                                        break;
+
+                                    }
+                                }
+
+                                if (mainLineup6.getG1() != null && mainLineup6.getG2() != null
+                                    && mainLineup6.getG3() != null
+                                    && mainLineup6.getG4() != null
+                                    && mainLineup6.getG5() != null
+                                    && mainLineup6.getG6() != null) {
+                                    lineupMlbHashMap.put(mainLineup6.getHash(), mainLineup6);
+                                    lineups = lineupMlbHashMap.values();
+                                }
+                                else {
+                                    System.out.println("Empty slot");
+                                }
 
                             }
                         }
@@ -132,7 +157,7 @@ public class GolfOpto {
             }
 
         }
-        return null;
+        return new ArrayList(lineups);
 
     }
     public List<GolfOptoPlayer> getOptimal(List<GolfOptoPlayer> players, int unique) {

@@ -1,0 +1,86 @@
+G,G,G,G,G,G,,Instructions,,,,,,,,
+,,,,,,,1. Locate the player you want to select in the list below,,,,,,,,
+,,,,,,,2. Copy the ID of your player (you can use the Name + ID column or the ID column),,,,,,,,
+,,,,,,,3. Paste the ID into the roster position desired,,,,,,,,
+,,,,,,,4. You must include an ID for each player; you cannot use just the player's name,,,,,,,,
+,,,,,,,5. You can create up to 500 lineups per file,,,,,,,,
+ ,,,,,,,,,,,,,,,
+,,,,,,,Position,Name + ID,Name,ID,Roster Position,Salary,Game Info,TeamAbbrev,AvgPointsPerGame
+,,,,,,,G,Justin Thomas (13609604),Justin Thomas,13609604,G,11800,The ZOZO Championship,Golf,112.17
+,,,,,,,G,Rory McIlroy (13609605),Rory McIlroy,13609605,G,11500,The ZOZO Championship,Golf,104.88
+,,,,,,,G,Hideki Matsuyama (13609606),Hideki Matsuyama,13609606,G,10700,The ZOZO Championship,Golf,77.5
+,,,,,,,G,Xander Schauffele (13609607),Xander Schauffele,13609607,G,10400,The ZOZO Championship,Golf,58
+,,,,,,,G,Paul Casey (13609608),Paul Casey,13609608,G,10100,The ZOZO Championship,Golf,72.67
+,,,,,,,G,Jordan Spieth (13609609),Jordan Spieth,13609609,G,10000,The ZOZO Championship,Golf,98
+,,,,,,,G,Adam Scott (13609610),Adam Scott,13609610,G,9900,The ZOZO Championship,Golf,92.5
+,,,,,,,G,Tommy Fleetwood (13609611),Tommy Fleetwood,13609611,G,9800,The ZOZO Championship,Golf,81.44
+,,,,,,,G,Patrick Reed (13609612),Patrick Reed,13609612,G,9600,The ZOZO Championship,Golf,77.4
+,,,,,,,G,Gary Woodland (13609613),Gary Woodland,13609613,G,9500,The ZOZO Championship,Golf,93
+,,,,,,,G,Viktor Hovland (13609614),Viktor Hovland,13609614,G,9400,The ZOZO Championship,Golf,85.5
+,,,,,,,G,Tiger Woods (13609615),Tiger Woods,13609615,G,9300,The ZOZO Championship,Golf,0
+,,,,,,,G,Tony Finau (13609616),Tony Finau,13609616,G,9200,The ZOZO Championship,Golf,94.33
+,,,,,,,G,Collin Morikawa (13609617),Collin Morikawa,13609617,G,9100,The ZOZO Championship,Golf,85.83
+,,,,,,,G,Matthew Fitzpatrick (13609618),Matthew Fitzpatrick,13609618,G,9000,The ZOZO Championship,Golf,88.65
+,,,,,,,G,Jason Day (13609619),Jason Day,13609619,G,8900,The ZOZO Championship,Golf,82
+,,,,,,,G,Sungjae Im (13609620),Sungjae Im,13609620,G,8800,The ZOZO Championship,Golf,85.5
+,,,,,,,G,Byeong Hun An (13609621),Byeong Hun An,13609621,G,8700,The ZOZO Championship,Golf,65.43
+,,,,,,,G,Rafa Cabrera Bello (13609622),Rafa Cabrera Bello,13609622,G,8600,The ZOZO Championship,Golf,86.2
+,,,,,,,G,Marc Leishman (13609623),Marc Leishman,13609623,G,8500,The ZOZO Championship,Golf,71.5
+,,,,,,,G,Louis Oosthuizen (13609624),Louis Oosthuizen,13609624,G,8400,The ZOZO Championship,Golf,96.62
+,,,,,,,G,Sergio Garcia (13609625),Sergio Garcia,13609625,G,8300,The ZOZO Championship,Golf,79.44
+,,,,,,,G,Joaquin Niemann (13609626),Joaquin Niemann,13609626,G,8200,The ZOZO Championship,Golf,81.38
+,,,,,,,G,Adam Hadwin (13609627),Adam Hadwin,13609627,G,8100,The ZOZO Championship,Golf,115.75
+,,,,,,,G,Shane Lowry (13609628),Shane Lowry,13609628,G,8000,The ZOZO Championship,Golf,85.67
+,,,,,,,G,Kevin Na (13609629),Kevin Na,13609629,G,7900,The ZOZO Championship,Golf,82.12
+,,,,,,,G,Ryan Moore (13609630),Ryan Moore,13609630,G,7800,The ZOZO Championship,Golf,73.5
+,,,,,,,G,Billy Horschel (13609631),Billy Horschel,13609631,G,7700,The ZOZO Championship,Golf,76.25
+,,,,,,,G,Kevin Kisner (13609632),Kevin Kisner,13609632,G,7600,The ZOZO Championship,Golf,31
+,,,,,,,G,Ian Poulter (13609633),Ian Poulter,13609633,G,7500,The ZOZO Championship,Golf,79.44
+,,,,,,,G,Emiliano Grillo (13609634),Emiliano Grillo,13609634,G,7500,The ZOZO Championship,Golf,54.88
+,,,,,,,G,Chez Reavie (13609635),Chez Reavie,13609635,G,7400,The ZOZO Championship,Golf,58.83
+,,,,,,,G,Andrew Putnam (13609636),Andrew Putnam,13609636,G,7400,The ZOZO Championship,Golf,98.38
+,,,,,,,G,Pat Perez (13609637),Pat Perez,13609637,G,7300,The ZOZO Championship,Golf,78.5
+,,,,,,,G,Charles Howell III (13609638),Charles Howell III,13609638,G,7300,The ZOZO Championship,Golf,85.33
+,,,,,,,G,Matthew Wolff (13609639),Matthew Wolff,13609639,G,7200,The ZOZO Championship,Golf,75
+,,,,,,,G,Corey Conners (13609640),Corey Conners,13609640,G,7200,The ZOZO Championship,Golf,69
+,,,,,,,G,Rory Sabbatini (13609642),Rory Sabbatini,13609642,G,7100,The ZOZO Championship,Golf,61.7
+,,,,,,,G,Shugo Imahira (13609643),Shugo Imahira,13609643,G,7100,The ZOZO Championship,Golf,0
+,,,,,,,G,Jason Kokrak (13609641),Jason Kokrak,13609641,G,7000,The ZOZO Championship,Golf,50
+,,,,,,,G,Lucas Glover (13609644),Lucas Glover,13609644,G,7000,The ZOZO Championship,Golf,58
+,,,,,,,G,Danny Lee (13609645),Danny Lee,13609645,G,6900,The ZOZO Championship,Golf,72.88
+,,,,,,,G,Ryan Palmer (13609646),Ryan Palmer,13609646,G,6900,The ZOZO Championship,Golf,89
+,,,,,,,G,Bubba Watson (13609647),Bubba Watson,13609647,G,6800,The ZOZO Championship,Golf,54.5
+,,,,,,,G,Harold Varner III (13609648),Harold Varner III,13609648,G,6800,The ZOZO Championship,Golf,81.7
+,,,,,,,G,Graeme McDowell (13609649),Graeme McDowell,13609649,G,6800,The ZOZO Championship,Golf,52.3
+,,,,,,,G,Abraham Ancer (13609650),Abraham Ancer,13609650,G,6700,The ZOZO Championship,Golf,50.25
+,,,,,,,G,Dylan Frittelli (13609651),Dylan Frittelli,13609651,G,6700,The ZOZO Championship,Golf,75.36
+,,,,,,,G,Kevin Streelman (13609652),Kevin Streelman,13609652,G,6700,The ZOZO Championship,Golf,57.5
+,,,,,,,G,Scott Piercy (13609653),Scott Piercy,13609653,G,6600,The ZOZO Championship,Golf,52.38
+,,,,,,,G,J.T. Poston (13609654),J.T. Poston,13609654,G,6600,The ZOZO Championship,Golf,65
+,,,,,,,G,Wyndham Clark (13609655),Wyndham Clark,13609655,G,6600,The ZOZO Championship,Golf,47.75
+,,,,,,,G,Keegan Bradley (13609656),Keegan Bradley,13609656,G,6500,The ZOZO Championship,Golf,56.83
+,,,,,,,G,Si Woo Kim (13609657),Si Woo Kim,13609657,G,6500,The ZOZO Championship,Golf,61.5
+,,,,,,,G,Daniel Berger (13609658),Daniel Berger,13609658,G,6500,The ZOZO Championship,Golf,69.67
+,,,,,,,G,Jazz Janewattananond (13609659),Jazz Janewattananond,13609659,G,6400,The ZOZO Championship,Golf,60.58
+,,,,,,,G,Nate Lashley (13609660),Nate Lashley,13609660,G,6400,The ZOZO Championship,Golf,76.5
+,,,,,,,G,Ryo Ishikawa (13609661),Ryo Ishikawa,13609661,G,6400,The ZOZO Championship,Golf,23.25
+,,,,,,,G,Joel Dahmen (13609662),Joel Dahmen,13609662,G,6400,The ZOZO Championship,Golf,69.5
+,,,,,,,G,Kevin Tway (13609663),Kevin Tway,13609663,G,6300,The ZOZO Championship,Golf,63.5
+,,,,,,,G,Keith Mitchell (13609664),Keith Mitchell,13609664,G,6300,The ZOZO Championship,Golf,47.75
+,,,,,,,G,Chan Kim (13609665),Chan Kim,13609665,G,6300,The ZOZO Championship,Golf,0
+,,,,,,,G,Sung Kang (13609666),Sung Kang,13609666,G,6300,The ZOZO Championship,Golf,67.25
+,,,,,,,G,Shaun Norris (13609667),Shaun Norris,13609667,G,6200,The ZOZO Championship,Golf,46
+,,,,,,,G,Adam Long (13609668),Adam Long,13609668,G,6200,The ZOZO Championship,Golf,83.88
+,,,,,,,G,C.T. Pan (13609669),C.T. Pan,13609669,G,6200,The ZOZO Championship,Golf,39.12
+,,,,,,,G,Adam Schenk (13609670),Adam Schenk,13609670,G,6200,The ZOZO Championship,Golf,57.9
+,,,,,,,G,Rikuya Hoshino (13609671),Rikuya Hoshino,13609671,G,6100,The ZOZO Championship,Golf,0
+,,,,,,,G,Seungsu Han (13609672),Seungsu Han,13609672,G,6100,The ZOZO Championship,Golf,22.5
+,,,,,,,G,Vaughn Taylor (13609673),Vaughn Taylor,13609673,G,6100,The ZOZO Championship,Golf,52.67
+,,,,,,,G,Troy Merritt (13609674),Troy Merritt,13609674,G,6100,The ZOZO Championship,Golf,62.14
+,,,,,,,G,Mikumu Horikawa (13609675),Mikumu Horikawa,13609675,G,6100,The ZOZO Championship,Golf,0
+,,,,,,,G,Satoshi Kodaira (13609676),Satoshi Kodaira,13609676,G,6000,The ZOZO Championship,Golf,23.25
+,,,,,,,G,Jinichiro Kozuma (13609677),Jinichiro Kozuma,13609677,G,6000,The ZOZO Championship,Golf,0
+,,,,,,,G,Sang-hyun Park (13609678),Sang-hyun Park,13609678,G,6000,The ZOZO Championship,Golf,35.7
+,,,,,,,G,Max Homa (13609679),Max Homa,13609679,G,6000,The ZOZO Championship,Golf,50.17
+,,,,,,,G,Yosuke Asaji (13609680),Yosuke Asaji,13609680,G,6000,The ZOZO Championship,Golf,0
+,,,,,,,G,Tomoharu Otsuki (13609681),Tomoharu Otsuki,13609681,G,6000,The ZOZO Championship,Golf,0

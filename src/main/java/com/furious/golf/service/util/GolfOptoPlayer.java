@@ -1,5 +1,7 @@
 package com.furious.golf.service.util;
 
+import java.util.Random;
+
 public class GolfOptoPlayer {
     String siteId;
     String playerName;
@@ -12,6 +14,11 @@ public class GolfOptoPlayer {
     int hash;
     double actual;
     String playerId;
+
+    public GolfOptoPlayer() {
+        Random r = new Random();
+        this.hash =   r.nextInt((1999999 - 1000000) + 1) + 1000000;
+    }
 
     public String getSiteId() {
         return siteId;
