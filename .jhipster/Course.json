@@ -1,6 +1,7 @@
 {
     "name": "Course",
     "fields": [
+
         {
             "fieldName": "name",
             "fieldType": "String"

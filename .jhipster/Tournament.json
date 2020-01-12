@@ -32,6 +32,10 @@
       {
         "fieldName": "pgaSeasonId",
         "fieldType": "Long"
+      },
+      {
+        "fieldName": "loaded",
+        "fieldType": "Boolean"
       }
     ],
     "relationships": [],

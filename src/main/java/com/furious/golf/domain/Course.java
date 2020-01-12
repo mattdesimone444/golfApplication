@@ -20,8 +20,6 @@ public class Course implements Serializable {
     @org.springframework.data.elasticsearch.annotations.Field(type = FieldType.Keyword)
     private Long id;
 
-    @Column(name = "course_id")
-    private Long courseId;
 
     @Column(name = "name")
     private String name;
@@ -1008,6 +1006,8 @@ public class Course implements Serializable {
         this.hole18Handicap = hole18Handicap;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+
 
     @Override
     public boolean equals(Object o) {

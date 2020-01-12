@@ -45,8 +45,7 @@ public class Tournament implements Serializable {
     @Column(name = "pga_season_id")
     private Long pgaSeasonId;
 
-    @Column(name = "loaded")
-    private Boolean loaded;
+
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
