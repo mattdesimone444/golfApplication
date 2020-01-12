@@ -70,6 +70,9 @@ public class TournamentResourceIT {
     private static final Long UPDATED_PGA_SEASON_ID = 2L;
     private static final Long SMALLER_PGA_SEASON_ID = 1L - 1L;
 
+    private static final Boolean DEFAULT_LOADED = false;
+    private static final Boolean UPDATED_LOADED = true;
+
     @Autowired
     private TournamentRepository tournamentRepository;
 
@@ -127,7 +130,8 @@ public class TournamentResourceIT {
             .purse(DEFAULT_PURSE)
             .courseId(DEFAULT_COURSE_ID)
             .pgaId(DEFAULT_PGA_ID)
-            .pgaSeasonId(DEFAULT_PGA_SEASON_ID);
+            .pgaSeasonId(DEFAULT_PGA_SEASON_ID)
+            .loaded(DEFAULT_LOADED);
         return tournament;
     }
     /**
@@ -145,7 +149,8 @@ public class TournamentResourceIT {
             .purse(UPDATED_PURSE)
             .courseId(UPDATED_COURSE_ID)
             .pgaId(UPDATED_PGA_ID)
-            .pgaSeasonId(UPDATED_PGA_SEASON_ID);
+            .pgaSeasonId(UPDATED_PGA_SEASON_ID)
+            .loaded(UPDATED_LOADED);
         return tournament;
     }
 
@@ -177,6 +182,7 @@ public class TournamentResourceIT {
         assertThat(testTournament.getCourseId()).isEqualTo(DEFAULT_COURSE_ID);
         assertThat(testTournament.getPgaId()).isEqualTo(DEFAULT_PGA_ID);
         assertThat(testTournament.getPgaSeasonId()).isEqualTo(DEFAULT_PGA_SEASON_ID);
+        assertThat(testTournament.isLoaded()).isEqualTo(DEFAULT_LOADED);
 
         // Validate the Tournament in Elasticsearch
         verify(mockTournamentSearchRepository, times(1)).save(testTournament);
@@ -223,7 +229,8 @@ public class TournamentResourceIT {
             .andExpect(jsonPath("$.[*].purse").value(hasItem(DEFAULT_PURSE.doubleValue())))
             .andExpect(jsonPath("$.[*].courseId").value(hasItem(DEFAULT_COURSE_ID.intValue())))
             .andExpect(jsonPath("$.[*].pgaId").value(hasItem(DEFAULT_PGA_ID.intValue())))
-            .andExpect(jsonPath("$.[*].pgaSeasonId").value(hasItem(DEFAULT_PGA_SEASON_ID.intValue())));
+            .andExpect(jsonPath("$.[*].pgaSeasonId").value(hasItem(DEFAULT_PGA_SEASON_ID.intValue())))
+            .andExpect(jsonPath("$.[*].loaded").value(hasItem(DEFAULT_LOADED.booleanValue())));
     }
     
     @Test
@@ -244,7 +251,8 @@ public class TournamentResourceIT {
             .andExpect(jsonPath("$.purse").value(DEFAULT_PURSE.doubleValue()))
             .andExpect(jsonPath("$.courseId").value(DEFAULT_COURSE_ID.intValue()))
             .andExpect(jsonPath("$.pgaId").value(DEFAULT_PGA_ID.intValue()))
-            .andExpect(jsonPath("$.pgaSeasonId").value(DEFAULT_PGA_SEASON_ID.intValue()));
+            .andExpect(jsonPath("$.pgaSeasonId").value(DEFAULT_PGA_SEASON_ID.intValue()))
+            .andExpect(jsonPath("$.loaded").value(DEFAULT_LOADED.booleanValue()));
     }
 
     @Test
@@ -275,7 +283,8 @@ public class TournamentResourceIT {
             .purse(UPDATED_PURSE)
             .courseId(UPDATED_COURSE_ID)
             .pgaId(UPDATED_PGA_ID)
-            .pgaSeasonId(UPDATED_PGA_SEASON_ID);
+            .pgaSeasonId(UPDATED_PGA_SEASON_ID)
+            .loaded(UPDATED_LOADED);
 
         restTournamentMockMvc.perform(put("/api/tournaments")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -294,6 +303,7 @@ public class TournamentResourceIT {
         assertThat(testTournament.getCourseId()).isEqualTo(UPDATED_COURSE_ID);
         assertThat(testTournament.getPgaId()).isEqualTo(UPDATED_PGA_ID);
         assertThat(testTournament.getPgaSeasonId()).isEqualTo(UPDATED_PGA_SEASON_ID);
+        assertThat(testTournament.isLoaded()).isEqualTo(UPDATED_LOADED);
 
         // Validate the Tournament in Elasticsearch
         verify(mockTournamentSearchRepository, times(1)).save(testTournament);
@@ -360,7 +370,8 @@ public class TournamentResourceIT {
             .andExpect(jsonPath("$.[*].purse").value(hasItem(DEFAULT_PURSE.doubleValue())))
             .andExpect(jsonPath("$.[*].courseId").value(hasItem(DEFAULT_COURSE_ID.intValue())))
             .andExpect(jsonPath("$.[*].pgaId").value(hasItem(DEFAULT_PGA_ID.intValue())))
-            .andExpect(jsonPath("$.[*].pgaSeasonId").value(hasItem(DEFAULT_PGA_SEASON_ID.intValue())));
+            .andExpect(jsonPath("$.[*].pgaSeasonId").value(hasItem(DEFAULT_PGA_SEASON_ID.intValue())))
+            .andExpect(jsonPath("$.[*].loaded").value(hasItem(DEFAULT_LOADED.booleanValue())));
     }
 
     @Test

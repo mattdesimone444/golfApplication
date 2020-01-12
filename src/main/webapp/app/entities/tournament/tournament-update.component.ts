@@ -25,7 +25,8 @@ export class TournamentUpdateComponent implements OnInit {
     purse: [],
     courseId: [],
     pgaId: [],
-    pgaSeasonId: []
+    pgaSeasonId: [],
+    loaded: []
   });
 
   constructor(protected tournamentService: TournamentService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -47,7 +48,8 @@ export class TournamentUpdateComponent implements OnInit {
       purse: tournament.purse,
       courseId: tournament.courseId,
       pgaId: tournament.pgaId,
-      pgaSeasonId: tournament.pgaSeasonId
+      pgaSeasonId: tournament.pgaSeasonId,
+      loaded: tournament.loaded
     });
   }
 
@@ -76,7 +78,8 @@ export class TournamentUpdateComponent implements OnInit {
       purse: this.editForm.get(['purse']).value,
       courseId: this.editForm.get(['courseId']).value,
       pgaId: this.editForm.get(['pgaId']).value,
-      pgaSeasonId: this.editForm.get(['pgaSeasonId']).value
+      pgaSeasonId: this.editForm.get(['pgaSeasonId']).value,
+      loaded: this.editForm.get(['loaded']).value
     };
   }
 

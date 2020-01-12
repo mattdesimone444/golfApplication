@@ -10,6 +10,7 @@ export interface ITournament {
   courseId?: number;
   pgaId?: number;
   pgaSeasonId?: number;
+  loaded?: boolean;
 }
 
 export class Tournament implements ITournament {
@@ -22,6 +23,9 @@ export class Tournament implements ITournament {
     public purse?: number,
     public courseId?: number,
     public pgaId?: number,
-    public pgaSeasonId?: number
-  ) {}
+    public pgaSeasonId?: number,
+    public loaded?: boolean
+  ) {
+    this.loaded = this.loaded || false;
+  }
 }

@@ -45,7 +45,8 @@ public class Tournament implements Serializable {
     @Column(name = "pga_season_id")
     private Long pgaSeasonId;
 
-
+    @Column(name = "loaded")
+    private Boolean loaded;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -159,6 +160,19 @@ public class Tournament implements Serializable {
     public void setPgaSeasonId(Long pgaSeasonId) {
         this.pgaSeasonId = pgaSeasonId;
     }
+
+    public Boolean isLoaded() {
+        return loaded;
+    }
+
+    public Tournament loaded(Boolean loaded) {
+        this.loaded = loaded;
+        return this;
+    }
+
+    public void setLoaded(Boolean loaded) {
+        this.loaded = loaded;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -189,6 +203,7 @@ public class Tournament implements Serializable {
             ", courseId=" + getCourseId() +
             ", pgaId=" + getPgaId() +
             ", pgaSeasonId=" + getPgaSeasonId() +
+            ", loaded='" + isLoaded() + "'" +
             "}";
     }
 }
