@@ -20,6 +20,9 @@ public class Course implements Serializable {
     @org.springframework.data.elasticsearch.annotations.Field(type = FieldType.Keyword)
     private Long id;
 
+    @Column(name = "course_id")
+    private Long courseId;
+
     @Column(name = "name")
     private String name;
 
